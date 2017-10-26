@@ -1,0 +1,61 @@
+device_tracker.averysipadlan:
+  hidden: True
+device_tracker.dell_printer:
+  hidden: True
+device_tracker.google_home_family:
+  hidden: True
+device_tracker.google_home_kitchen:
+  hidden: True
+device_tracker.google_wifi:
+  hidden: True
+device_tracker.google_wifi_2:
+  hidden: True
+device_tracker.hass_tablet:
+  hidden: True
+device_tracker.hue_hub:
+  hidden: True
+device_tracker.jakesipadlan:
+  hidden: True
+device_tracker.nexusplayer:
+  hidden: True
+device_tracker.officedesktop:
+  hidden: True
+device_tracker.onhub:
+  hidden: True
+device_tracker.shieldtv:
+  hidden: True
+device_tracker.shieldtv_2:
+  hidden: True
+device_tracker.tablotv:
+  hidden: True
+
+sensor.averysipad:
+  icon: mdi:tablet-ipad
+sensor.dell_printer:
+  icon: mdi:printer
+sensor.googlehome_family:
+  icon: mdi:google
+sensor.googlehome_kitchen:
+  icon: mdi:google
+sensor.googlewifi:
+  icon: mdi:google
+sensor.googlewifi_2:
+  icon: mdi:google
+sensor.hass_tablet:
+  icon: mdi:home
+sensor.hue_hub:
+  icon: mdi:nest-protect
+sensor.jakesipad:
+  icon: mdi:tablet-ipad
+sensor.nexusplayer:
+  icon: mdi:play-box-outline
+sensor.officedesktop:
+  icon: mdi:laptop
+sensor.onhub:
+  icon: mdi:router-wireless
+sensor.shieldtv:
+  icon: mdi:play-box-outline
+sensor.shieldtv_2:
+  icon: mdi:play-box-outline
+sensor.tablotv:
+  icon: mdi:television-guide

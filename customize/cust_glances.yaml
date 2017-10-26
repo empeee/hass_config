@@ -1,0 +1,12 @@
+sensor.glances_cpu_load:
+  friendly_name: CPU Load
+  icon: mdi:chip
+sensor.glances_disk_use:
+  friendly_name: Disk Use
+  icon: mdi:disk
+sensor.glances_ram_use:
+  friendly_name: RAM Use
+  icon: mdi:memory
+sensor.glances_swap_use:
+  friendly_name: Swap Use
+  icon: mdi:memory

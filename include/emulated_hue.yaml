@@ -1,0 +1,4 @@
+host_ip: 192.168.86.10
+type: google_home
+listen_port: 80
+expose_by_default: false

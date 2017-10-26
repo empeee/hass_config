@@ -1,0 +1,9 @@
+switch.outside_front_porch_switch:
+  friendly_name: Outside Front Porch
+  
+switch.outside_garage_switch:
+  friendly_name: Outside Garage
+  
+switch.ps_general1_switch:
+  emulated_hue_hidden: false
+  friendly_name: Basement Dehumidifier

@@ -1,0 +1,30 @@
+zwave.family_room:
+  ignored: false
+  polling_intensity: 0
+zwave.living_room:
+  ignored: false
+  polling_intensity: 0
+zwave.outside_front_porch:
+  ignored: false
+  polling_intensity: 0
+zwave.outside_garage:
+  ignored: false
+  polling_intensity: 0
+zwave.family_room_ceiling:
+  ignored: false
+  polling_intensity: 0
+climate.family_room_heating_1:
+  ignored: false
+  polling_intensity: 1
+climate.living_room_heating_1:
+  ignored: false
+  polling_intensity: 1
+light.family_room_ceiling_level:
+  ignored: false
+  polling_intensity: 1
+switch.outside_front_porch_switch:
+  ignored: false
+  polling_intensity: 1
+switch.outside_garage_switch:
+  ignored: false
+  polling_intensity: 1

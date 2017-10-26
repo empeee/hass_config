@@ -1,0 +1,98 @@
+binary_sensor.ms_family_room_sensor:
+  hidden: True
+sensor.ms_family_room_alarm_level:
+  hidden: True
+sensor.ms_family_room_alarm_type:
+  hidden: True
+sensor.ms_family_room_burglar:
+  hidden: True
+sensor.ms_family_room_luminance:
+  hidden: True
+sensor.ms_family_room_relative_humidity:
+  friendly_name: Family Room Humidity
+  icon: 'mdi:water-percent'
+sensor.ms_family_room_sourcenodeid:
+  hidden: True
+sensor.ms_family_room_temperature:
+  friendly_name: Family Room Motion
+sensor.ms_family_room_ultraviolet:
+  hidden: True
+sensor.family_room_motion:
+  icon: mdi:run
+
+  
+binary_sensor.ms_living_room_sensor:
+  hidden: True
+sensor.ms_living_room_alarm_level:
+  hidden: True
+sensor.ms_living_room_alarm_type:
+  hidden: True
+sensor.ms_living_room_burglar:
+  hidden: True
+sensor.ms_living_room_luminance:
+  hidden: True
+sensor.ms_living_room_relative_humidity:
+  friendly_name: Living Room Humidity
+  icon: 'mdi:water-percent'
+sensor.ms_living_room_sourcenodeid:
+  hidden: True
+sensor.ms_living_room_temperature:
+  friendly_name: Living Room Motion
+sensor.ms_living_room_ultraviolet:
+  hidden: True
+sensor.living_room_motion:
+  icon: mdi:run
+
+  
+binary_sensor.ms_basement_sensor:
+  hidden: True
+sensor.ms_basement_alarm_level:
+  hidden: True
+sensor.ms_basement_alarm_type:
+  hidden: True
+sensor.ms_basement_burglar:
+  hidden: True
+sensor.ms_basement_luminance:
+  hidden: True
+sensor.ms_basement_relative_humidity:
+  friendly_name: Basement Humidity
+  icon: 'mdi:water-percent'
+sensor.ms_basement_sourcenodeid:
+  hidden: True
+sensor.ms_basement_temperature:
+  friendly_name: Basement Motion
+sensor.ms_basement_ultraviolet:
+  hidden: True
+sensor.basement_motion:
+  icon: mdi:run
+
+  
+binary_sensor.ms_kitchen_sensor:
+  hidden: True
+sensor.ms_kitchen_alarm_level:
+  hidden: True
+sensor.ms_kitchen_alarm_type:
+  hidden: True
+sensor.ms_kitchen_burglar:
+  hidden: True
+sensor.ms_kitchen_luminance:
+  hidden: True
+sensor.ms_kitchen_relative_humidity:
+  friendly_name: Kitchen Humidity
+  icon: 'mdi:water-percent'
+sensor.ms_kitchen_sourcenodeid:
+  hidden: True
+sensor.ms_kitchen_temperature:
+  friendly_name: Kitchen Motion
+sensor.ms_kitchen_ultraviolet:
+  hidden: True
+sensor.kitchen_motion:
+  icon: mdi:run
+  
+sensor.downstairs_motion:
+  icon: mdi:run
+sensor.downstairs_motion_filtered:
+  icon: mdi:run
+  
+sensor.basement_motion_filtered:
+  icon: mdi:run

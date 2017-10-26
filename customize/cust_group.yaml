@@ -1,0 +1,16 @@
+#
+# Lights Tab
+#
+group.family_room_lights:
+  emulated_hue_hidden: false
+group.living_room_lights:
+  emulated_hue_hidden: false
+group.kitchen_lights:
+  emulated_hue_hidden: false
+group.outside_lights:
+  emulated_hue_hidden: false
+group.basement_lights:
+  emulated_hue_hidden: false
+
+group.whole_house_lights:
+  emulated_hue_hidden: false

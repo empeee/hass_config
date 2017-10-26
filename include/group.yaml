@@ -1,0 +1,389 @@
+#
+# Tabs
+#
+default_view:
+  view: yes
+  icon: mdi:home
+  entities:
+    - group.home_settings
+    - group.presence
+    - group.water_system
+    - camera.home_camera
+    - camera.usps_mail
+#    - group.cameras
+
+#Cameras:
+#  entities:
+#    - camera.front_door
+#    - camera.back_door
+#    - camera.garage
+#    - camera.misc
+  
+    
+Lights:
+  view: yes
+  icon: mdi:lightbulb
+  entities:
+    - group.whole_house_scenes
+    - group.family_room_scenes
+    - group.living_room_scenes
+    - group.kitchen_scenes
+    - group.outside_lights
+
+Climate:
+  view: yes
+  icon: mdi:nest-thermostat
+  entities:
+    - group.downstairs_thermostats
+    - group.downstairs_temperature_sensors
+    - group.upstairs_thermostats
+    - group.upstairs_temperature_sensors
+    - group.cooling_thermostats
+    - group.basement_temperature_sensors
+    - group.humidity_sensors
+
+Weather:
+  view: yes
+  icon: mdi:weather-partlycloudy
+  entities:
+    - camera.rochester_radar
+    - group.weather_station
+
+Media:
+  view: yes
+  icon: mdi:filmstrip
+  entities:
+    - group.media_players
+
+Lights Detail:
+  view: yes
+  icon: mdi:lightbulb-outline
+  entities:
+    - group.family_room_lights
+    - group.living_room_lights
+    - group.kitchen_lights
+    - group.outside_lights
+    - group.basement_lights
+    - group.smart_switches
+
+
+Automation Detail:
+  view: yes
+  icon: mdi:autorenew
+  entities:
+    - group.light_automations
+    - group.climate_automations
+    - group.sensor_notifications
+    - group.motion_automations
+    - group.basement_automations
+
+Other Detail:
+  view: yes
+  icon: mdi:clipboard-text
+  entities:
+    - group.pi_monitor
+    - group.internet_status
+    - group.energy_monitor
+    - group.zwave_nodes
+    - group.thermostat_states
+    - group.detailed_motion
+
+#
+# Default View Tab
+#
+Home Settings:
+  entities:
+    - input_boolean.vacation_mode
+    - input_boolean.guest_mode
+    - input_boolean.flux
+    - input_boolean.heat_automation
+    - input_boolean.cool_automation
+#    - alarm_control_panel.pude
+
+Presence:
+  entities:
+    - device_tracker.mark_phone
+    - device_tracker.leslie_phone
+    - sensor.downstairs_motion_filtered
+    - sensor.basement_motion_filtered
+
+Water System:
+  entities:
+    - binary_sensor.basement_water_liquid_detected
+    - binary_sensor.basement_sump_liquid_detected
+    - binary_sensor.basement_hot_water_liquid_detected
+
+Energy Monitor:
+  entities:
+    - sensor.energy_meter_energy
+    - sensor.energy_meter_power
+    - sensor.energy_meter_current
+    - sensor.energy_meter_voltage
+    - sensor.ps_general1_energy
+    - sensor.ps_general1_power
+    - sensor.ps_general1_current
+    - sensor.ps_general1_voltage
+
+#
+# Light Tab
+#
+
+Whole House Scenes:
+  entities:
+    - scene.night_home
+    - scene.night_away
+    - scene.whole_house_christmas
+
+Family Room Scenes:
+  entities:
+    - scene.family_room__normal
+    - scene.family_room__relax
+    - scene.family_room__full
+    - scene.family_room__watch_tv
+
+Living Room Scenes:
+  entities:
+    - scene.living_room__normal
+    - scene.living_room__relax
+
+Kitchen Scenes:
+  entities:
+    - scene.kitchen__normal
+    - scene.kitchen__relax
+    - scene.kitchen__night
+
+Family Room Lights:
+  entities:
+    - light.family_room_ceiling_level
+    - light.family_room_games
+    - light.family_room_piano
+    - light.family_room_tv
+
+Living Room Lights:
+  entities:
+    - light.living_room_lamp
+    - light.living_room_tall_lamp
+    - light.living_room_coffee_lamp
+
+Kitchen Lights:
+  entities:
+    - light.kitchen_1
+    - light.kitchen_2
+    - light.kitchen_3
+    - light.kitchen_4
+    - light.kitchen_5
+
+Basement Lights:
+  entities:
+    - light.basement_bedroom
+    - light.basement_toys
+    - light.basement_couch
+
+Outside Lights:
+  entities:
+    - switch.outside_front_porch_switch
+    - switch.outside_garage_switch
+
+Smart Switches:
+  entities:
+    - switch.ps_general1_switch
+
+#
+# Custom 'Whole House Lights' group for emulated_hue
+#
+Whole House Lights:
+  entities:
+    - group.family_room_lights
+    - group.living_room_lights
+    - group.kitchen_lights
+    - group.outside_lights
+
+#
+# Climate Tab
+#
+Downstairs Thermostats:
+  entities:
+    - climate.family_room_heating_1
+    - climate.living_room_heating_1
+
+Upstairs Thermostats:
+  entities:
+    - climate.master_bedroom_heating_1
+    - climate.jake_bedroom_heating_1
+
+Cooling Thermostats:
+  entities:
+    - climate.upstairs_hall_cooling_1
+
+Downstairs Temperature Sensors:
+  entities:
+    - sensor.family_room_temperature
+    - sensor.ms_family_room_temperature
+    - sensor.living_room_temperature
+    - sensor.ms_living_room_temperature
+    - sensor.ms_kitchen_temperature
+
+Upstairs Temperature Sensors:
+  entities:
+    - sensor.master_bedroom_temperature
+    - sensor.jake_bedroom_temperature
+    - sensor.upstairs_hall_temperature
+
+Basement Temperature Sensors:
+  entities:
+    - sensor.ms_basement_temperature
+    - sensor.basement_water_temperature
+    - sensor.basement_sump_temperature
+    - sensor.basement_hot_water_temperature
+
+Humidity Sensors:
+  entities:
+    - sensor.ms_family_room_relative_humidity
+    - sensor.ms_living_room_relative_humidity
+    - sensor.ms_kitchen_relative_humidity
+    - sensor.ms_basement_relative_humidity
+
+#
+# Weather Tab
+#
+
+Weather Station:
+  entities:
+    - sensor.pws_weather
+    - sensor.pws_weather_1d
+    - sensor.pws_alerts
+    - sun.sun
+    - sensor.pws_station_id
+    - sensor.pws_temp_f
+    - sensor.pws_dewpoint_f
+    - sensor.dark_sky_dew_point
+    - sensor.pws_relative_humidity
+    - sensor.pws_feelslike_f
+    - sensor.pws_uv
+    - sensor.pws_wind_mph
+    - sensor.pws_wind_dir
+    - sensor.pws_precip_today_in
+    - sensor.pws_pressure_in
+
+#
+# Media Tab
+#
+Internet Status:
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+    - sensor.google_wifi_current_version
+    - sensor.google_wifi_last_restart
+    - sensor.google_wifi_local_ip
+    - sensor.google_wifi_new_version
+    - sensor.google_wifi_status
+    - sensor.google_wifi_uptime
+    - sensor.pihole_ads_blocked_today
+    - sensor.pihole_ads_percentage_blocked_today
+    - sensor.pihole_dns_queries_cached
+    - sensor.pihole_dns_queries_forwarded
+    - sensor.pihole_dns_queries_today
+    - sensor.pihole_dns_unique_clients
+    - sensor.pihole_dns_unique_domains
+    - sensor.pihole_domains_blocked
+
+
+
+Media Players:
+  entities:
+    - media_player.sony_bravia_tv
+    - media_player.family_room_home
+    - media_player.kitchen_home
+    - media_player.both_rooms
+    - media_player.family_room
+    - media_player.basement
+    - media_player.bedroom
+
+#
+# Settings Tab
+#
+
+Light Automations:
+  entities:
+    - automation.light_sunset_home
+    - automation.light_sunset_vacation
+    - automation.light_sunset_outside
+    - automation.light_midnight_off
+    - automation.light_vacation_switch_on_night
+    - automation.light_vacation_switch_off_night
+
+Climate Automations:
+  entities:
+    - automation.climate_cool_switch_on
+    - automation.climate_cool_switch_off
+    - automation.climate_heat_switch_on
+    - automation.climate_heat_switch_off
+    - automation.climate_vacation_switch_on
+    - automation.climate_vacation_switch_off_night
+    - automation.climate_vacation_switch_off_day
+    - automation.climate_heat_home_night
+    - automation.climate_heat_home_day
+
+Sensor Notifications:
+  entities:
+    - automation.basement_water_tank_change
+    - automation.basement_hot_water_tank_change
+    - automation.basement_sump_pump_change
+
+Basement Automations:
+  entities:
+    - automation.basement_guest_sunrise_lights
+    - automation.basement_guest_dehumidifier_night
+    - automation.basement_guest_switch_on_night
+    - automation.basement_guest_switch_off_night
+    - automation.basement_dehumidifier_day
+
+
+Motion Automations:
+  entities:
+    - automation.motion_downstairs__motiontostill
+    - automation.motion_downstairs__stilltomotion
+    - automation.motion_basement__motiontostill
+    - automation.motion_basement__stilltomotion
+
+Detailed Motion:
+  entities:
+    - sensor.living_room_motion
+    - sensor.family_room_motion
+    - sensor.kitchen_motion
+    - sensor.downstairs_motion
+    - input_boolean.motion_downstairs
+    - sensor.basement_motion
+    - input_boolean.motion_basement
+
+#
+# Debug Tab
+#
+ZWave Nodes:
+  entities:
+    - zwave.aeotec_zw090_zstick_gen5
+    - zwave.family_room
+    - zwave.living_room
+    - zwave.jake_bedroom
+    - zwave.master_bedroom
+    - zwave.upstairs_hall
+    - zwave.family_room_ceiling
+    - zwave.outside_front_porch
+    - zwave.outside_garage
+    - zwave.energy_meter
+    - zwave.ps_general1
+    - zwave.ms_living_room
+    - zwave.ms_family_room
+    - zwave.ms_basement
+    - zwave.ms_kitchen
+
+Thermostat States:
+  entities:
+    - sensor.family_room_tstat_state
+    - sensor.living_room_tstat_state
+    - sensor.master_bedroom_tstat_state
+    - sensor.jake_bedroom_tstat_state
+    - sensor.upstairs_hall_tstat_state
+    - sensor.cooling_on
+    - sensor.heating_on

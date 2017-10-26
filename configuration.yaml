@@ -1,0 +1,37 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 187.5
+  unit_system: imperial
+  time_zone: America/New_York
+  customize: !include_dir_merge_named customize
+
+#panel_iframe: !include include/panel_iframe.yaml
+#usps: !include include/usps.yaml
+#alarm_control_panel:
+#  - platform: arlo
+#arlo: !include include/arlo.yaml
+automation: !include automations.yaml
+camera: !include include/camera.yaml
+config:
+device_tracker: !include include/device_tracker.yaml
+discovery:
+emulated_hue: !include include/emulated_hue.yaml
+frontend:
+group: !include include/group.yaml
+history: !include include/history.yaml
+http: !include include/httpconfig.yaml
+influxdb: !include include/influxdb.yaml
+input_boolean: !include include/inputboolean.yaml
+logbook:
+logger: !include include/logger.yaml
+media_player: !include include/media_player.yaml
+notify: !include include/notify.yaml
+recorder: !include include/recorder.yaml
+scene: !include include/scene.yaml
+sensor: !include include/sensor.yaml
+sun:
+updater:
+wink: !include include/wink.yaml
+zwave: !include include/zwave.yaml
