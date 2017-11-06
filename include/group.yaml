@@ -11,15 +11,15 @@ default_view:
     - camera.home_camera
     - camera.usps_mail
 #    - group.cameras
-
+#
 #Cameras:
 #  entities:
 #    - camera.front_door
 #    - camera.back_door
 #    - camera.garage
 #    - camera.misc
-  
-    
+
+
 Lights:
   view: yes
   icon: mdi:lightbulb
@@ -87,6 +87,7 @@ Other Detail:
     - group.zwave_nodes
     - group.thermostat_states
     - group.detailed_motion
+    - group.fail2ban_sensors
 
 #
 # Default View Tab
@@ -387,3 +388,11 @@ Thermostat States:
     - sensor.upstairs_hall_tstat_state
     - sensor.cooling_on
     - sensor.heating_on
+
+Fail2Ban Sensors:
+  entities:
+    - sensor.fail2ban_nginxhttpauth
+    - sensor.fail2ban_nginxbadbots
+    - sensor.fail2ban_nginxbotsearch
+    - sensor.fail2ban_organizrauth
+    - sensor.fail2ban_hassiptables
