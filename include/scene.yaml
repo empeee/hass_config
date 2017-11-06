@@ -71,7 +71,7 @@
     light.family_room_ceiling_level_6_0:
       state: on
       brightness: 127
-      
+
 - name: Family Room - Full
   entities:
     light.family_room_piano:
@@ -89,7 +89,7 @@
     light.family_room_ceiling_level_6_0:
       state: on
       brightness: 254
-      
+
 - name: Family Room - Watch TV
   entities:
     light.family_room_piano:
@@ -165,7 +165,7 @@
       state: on
       profile: reading
       transition: 2
-      
+
 - name: Kitchen - Relax
   entities:
     light.kitchen_1:
@@ -188,7 +188,7 @@
       state: on
       profile: relax
       transition: 2
-      
+
 - name: Kitchen - Night
   entities:
     light.kitchen_1:
@@ -211,7 +211,7 @@
 
 #
 # Special/Seasonal Scenes
-#      
+#
 - name: Whole House Christmas
   entities:
     light.living_room_lamp:

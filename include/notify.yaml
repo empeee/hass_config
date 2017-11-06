@@ -2,4 +2,3 @@
   platform: html5
   gcm_api_key: !secret html5_key
   gcm_sender_id: !secret html5_id
-  
