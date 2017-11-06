@@ -20,7 +20,6 @@ sensor.ms_family_room_ultraviolet:
 sensor.family_room_motion:
   icon: mdi:run
 
-  
 binary_sensor.ms_living_room_sensor:
   hidden: True
 sensor.ms_living_room_alarm_level:
@@ -43,7 +42,6 @@ sensor.ms_living_room_ultraviolet:
 sensor.living_room_motion:
   icon: mdi:run
 
-  
 binary_sensor.ms_basement_sensor:
   hidden: True
 sensor.ms_basement_alarm_level:
@@ -66,7 +64,6 @@ sensor.ms_basement_ultraviolet:
 sensor.basement_motion:
   icon: mdi:run
 
-  
 binary_sensor.ms_kitchen_sensor:
   hidden: True
 sensor.ms_kitchen_alarm_level:
@@ -88,11 +85,11 @@ sensor.ms_kitchen_ultraviolet:
   hidden: True
 sensor.kitchen_motion:
   icon: mdi:run
-  
+
 sensor.downstairs_motion:
   icon: mdi:run
 sensor.downstairs_motion_filtered:
   icon: mdi:run
-  
+
 sensor.basement_motion_filtered:
   icon: mdi:run

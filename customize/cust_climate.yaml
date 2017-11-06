@@ -32,4 +32,3 @@ climate.upstairs_hall_heating_1:
   hidden: true
 sensor.upstairs_hall_temperature:
   friendly_name: Upstairs Hall Thermostat
- 
