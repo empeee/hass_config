@@ -461,3 +461,31 @@
     service: switch.turn_on
     data:
       entity_id: switch.ps_general1_switch
+
+# Notify on fail2ban sensor
+- id: notify_on_failed_login
+  alias: Notify on Failed Login
+  trigger:
+    - platform: state
+      entity_id: sensor.fail2ban_nginxhttpauth
+    - platform: state
+      entity_id: sensor.fail2ban_organizrauth
+    - platform: state
+      entity_id: sensor.fail2ban_hassiptables
+  condition:
+    condition: or
+    conditions:
+      - condition: template
+        value_template: '{{ states.sensor.fail2ban_nginxhttpauth.state != "None" }}'
+      - condition: template
+        value_template: '{{ states.sensor.fail2ban_organizrauth.state != "None" }}'
+      - condition: template
+        value_template: '{{ states.sensor.fail2ban_hassiptables.state != "None" }}'
+  action:
+      - service: notify.html5
+        data_template:
+          message: >
+            Failed Login! {{ now().strftime("%h %d, %Y at %H:%M:%S") }}
+            {% if states.sensor.fail2ban_hassiptables.state  != "None" %}HASS Attempt(s) from {{states.sensor.fail2ban_hassiptables.state}}{% endif %}
+            {% if states.sensor.fail2ban_nginxhttpauth.state != "None" %}NGINX Attempt(s) from {{states.sensor.fail2ban_nginxhttpauth.state}}{% endif %}
+            {% if states.sensor.fail2ban_organizrauth.state  != "None" %}Organizr Attempt(s) from {{states.sensor.fail2ban_organizrauth.state}}{% endif %}
