@@ -32,5 +32,4 @@ scene: !include include/scene.yaml
 sensor: !include include/sensor.yaml
 sun:
 updater:
-#wink: #!include include/wink.yaml
 zwave: !include include/zwave.yaml
