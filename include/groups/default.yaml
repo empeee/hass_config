@@ -1,0 +1,31 @@
+#
+# Default View Tab
+#
+Home Settings:
+  entities:
+    - input_boolean.vacation_mode
+    - input_boolean.guest_mode
+    - input_boolean.flux
+    - input_boolean.heat_automation
+    - input_boolean.cool_automation
+    - alarm_control_panel.pude_farm
+
+Presence:
+  entities:
+    - device_tracker.mark_phone
+    - device_tracker.leslie_phone
+    - sensor.downstairs_motion_filtered
+    - sensor.basement_motion_filtered
+
+Water System:
+  entities:
+    - binary_sensor.basement_water_liquid_detected
+    - binary_sensor.basement_sump_liquid_detected
+    - binary_sensor.basement_hot_water_liquid_detected
+
+Cameras:
+  entities:
+    - camera.front_door
+    - camera.back_door
+    - camera.garage
+    - camera.misc

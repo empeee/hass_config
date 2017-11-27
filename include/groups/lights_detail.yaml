@@ -1,0 +1,38 @@
+#
+# Lights Detail
+#
+Family Room Lights:
+  entities:
+    - light.family_room_ceiling_level
+    - light.family_room_games
+    - light.family_room_piano
+    - light.family_room_tv
+
+Living Room Lights:
+  entities:
+    - light.living_room_lamp
+    - light.living_room_tall_lamp
+    - light.living_room_coffee_lamp
+
+Kitchen Lights:
+  entities:
+    - light.kitchen_1
+    - light.kitchen_2
+    - light.kitchen_3
+    - light.kitchen_4
+    - light.kitchen_5
+
+Basement Lights:
+  entities:
+    - light.basement_bedroom
+    - light.basement_toys
+    - light.basement_couch
+
+Outside Lights:
+  entities:
+    - switch.outside_front_porch_switch
+    - switch.outside_garage_switch
+
+Smart Switches:
+  entities:
+    - switch.ps_general1_switch

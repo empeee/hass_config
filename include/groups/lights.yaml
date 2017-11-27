@@ -1,0 +1,26 @@
+#
+# Light Tab
+#
+Whole House Scenes:
+  entities:
+    - scene.night_home
+    - scene.night_away
+    - scene.whole_house_christmas
+
+Family Room Scenes:
+  entities:
+    - scene.family_room__normal
+    - scene.family_room__relax
+    - scene.family_room__full
+    - scene.family_room__watch_tv
+
+Living Room Scenes:
+  entities:
+    - scene.living_room__normal
+    - scene.living_room__relax
+
+Kitchen Scenes:
+  entities:
+    - scene.kitchen__normal
+    - scene.kitchen__relax
+    - scene.kitchen__night

@@ -1,0 +1,44 @@
+#
+# Climate Tab
+#
+Downstairs Thermostats:
+  entities:
+    - climate.family_room_heating_1
+    - climate.living_room_heating_1
+
+Upstairs Thermostats:
+  entities:
+    - climate.master_bedroom_heating_1
+    - climate.jake_bedroom_heating_1
+
+Cooling Thermostats:
+  entities:
+    - climate.upstairs_hall_cooling_1
+
+Downstairs Temperature Sensors:
+  entities:
+    - sensor.family_room_temperature
+    - sensor.ms_family_room_temperature
+    - sensor.living_room_temperature
+    - sensor.ms_living_room_temperature
+    - sensor.ms_kitchen_temperature
+
+Upstairs Temperature Sensors:
+  entities:
+    - sensor.master_bedroom_temperature
+    - sensor.jake_bedroom_temperature
+    - sensor.upstairs_hall_temperature
+
+Basement Temperature Sensors:
+  entities:
+    - sensor.ms_basement_temperature
+    - sensor.basement_water_temperature
+    - sensor.basement_sump_temperature
+    - sensor.basement_hot_water_temperature
+
+Humidity Sensors:
+  entities:
+    - sensor.ms_family_room_relative_humidity
+    - sensor.ms_living_room_relative_humidity
+    - sensor.ms_kitchen_relative_humidity
+    - sensor.ms_basement_relative_humidity
