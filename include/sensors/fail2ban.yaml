@@ -1,0 +1,9 @@
+- platform: fail2ban
+  jails:
+    - nginx-http-auth
+    - nginx-badbots
+    - nginx-botsearch
+    - organizr-auth
+    - hass-iptables
+  file_path: !secret fail2ban_log
+  scan_interval: 120

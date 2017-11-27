@@ -1,0 +1,17 @@
+- platform: history_stats
+  entity_id: climate.upstairs_hall_cooling_1
+  name: Cooling On
+  state: 'Cool'
+  type: time
+  end: '{{ now() }}'
+  duration:
+    hours: 24
+
+- platform: history_stats
+  entity_id: climate.family_room_heating_1
+  name: Heating On
+  state: 'Heat'
+  type: time
+  end: '{{ now() }}'
+  duration:
+    hours: 24

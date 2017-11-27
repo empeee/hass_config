@@ -1,0 +1,17 @@
+- platform: wunderground
+  api_key: f46fc3e0accf13de
+  pws_id: knyhoneo5
+  monitored_conditions:
+    - alerts
+    - weather
+    - weather_1d
+    - station_id
+    - temp_f
+    - dewpoint_f
+    - relative_humidity
+    - feelslike_f
+    - UV
+    - wind_mph
+    - wind_dir
+    - precip_today_in
+    - pressure_in
