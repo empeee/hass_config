@@ -10,14 +10,14 @@ default_view:
     - group.water_system
     - camera.home_camera
     - camera.usps_mail
-#    - group.cameras
-#
-#Cameras:
-#  entities:
-#    - camera.front_door
-#    - camera.back_door
-#    - camera.garage
-#    - camera.misc
+    - group.cameras
+
+Cameras:
+  entities:
+    - camera.front_door
+    - camera.back_door
+    - camera.garage
+    - camera.misc
 
 
 Lights:
@@ -100,6 +100,7 @@ Home Settings:
     - input_boolean.heat_automation
     - input_boolean.cool_automation
 #    - alarm_control_panel.pude
+    - alarm_control_panel.pude_farm
 
 Presence:
   entities:

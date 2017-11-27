@@ -8,9 +8,9 @@ homeassistant:
   customize: !include_dir_merge_named customize
 
 #usps: !include include/usps.yaml
-#alarm_control_panel:
-#  - platform: arlo
-#arlo: !include include/arlo.yaml
+alarm_control_panel:
+  - platform: arlo
+arlo: !include include/arlo.yaml
 automation: !include automations.yaml
 camera: !include include/camera.yaml
 config:
