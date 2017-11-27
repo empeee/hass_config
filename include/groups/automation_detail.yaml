@@ -31,10 +31,6 @@ Sensor Notifications:
 Basement Automations:
   entities:
     - automation.basement_guest_sunrise_lights
-    - automation.basement_guest_dehumidifier_night
-    - automation.basement_guest_switch_on_night
-    - automation.basement_guest_switch_off_night
-    - automation.basement_dehumidifier_day
 
 Motion Automations:
   entities:
