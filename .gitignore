@@ -1,13 +1,6 @@
 /*.conf
-/*.crt
-/*.csr
-/*.db*
-/*.env
 /*.json
-/*.key
 /*.log
-/*.pid
-/*.png
 /*.sqlite
 /*.txt
 /*.xml
@@ -16,7 +9,5 @@
 /.uuid
 /deps/
 /known_devices.yaml
-/lib/
 /secrets.yaml
-/tts/
 /www/
