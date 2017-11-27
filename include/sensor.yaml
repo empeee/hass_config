@@ -12,7 +12,7 @@
     - nginx-botsearch
     - organizr-auth
     - hass-iptables
-  file_path: /fail2ban/fail2ban.log
+  file_path: !secret fail2ban_log
   scan_interval: 120
 
 - platform: google_wifi

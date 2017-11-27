@@ -7,5 +7,4 @@ script:
     - hass -c . --script check_config
 before_install:
     - mv travis_secrets.yaml secrets.yaml
-    - mkdir /fail2ban
-    - touch /fail2ban/fail2ban.log
+    - touch /tmp/test.txt
