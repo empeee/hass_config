@@ -1,32 +1,25 @@
 vacation_mode:
   name: Vacation Mode
-#  initial: off
   icon: mdi:sunglasses
 
 guest_mode:
   name: Guest Mode
-#  initial: off
   icon: mdi:account
 
 flux:
   name: Flux Lights
-#  initial: on
   icon: mdi:lightbulb
 
 motion_downstairs:
   name: Motion Downstairs
-#  initial: off
 
 motion_basement:
   name: Motion Basement
-#  initial: off
 
 heat_automation:
   name: Heating
-#  initial: on
   icon: mdi:nest-thermostat
 
 cool_automation:
   name: Cooling
-#  initial: on
   icon: mdi:nest-thermostat

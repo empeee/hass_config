@@ -1,2 +1,2 @@
 - platform: braviatv
-  host: 192.168.86.34
+  host: !secret bravia_tv

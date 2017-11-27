@@ -1,2 +1,2 @@
-host: 192.168.86.10
+host: !secret influxdb_ip
 default_measurement: state

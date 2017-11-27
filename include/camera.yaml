@@ -2,10 +2,6 @@
   still_image_url: !secret radar_url
   name: Rochester Radar
 
-#- platform: local_file
-#  name: Home Camera
-#  file_path: /tmp/lastsnap.jpg
-
 #- platform: usps
 #  scan_interval: 5
 

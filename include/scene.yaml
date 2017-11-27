@@ -51,7 +51,7 @@
     light.family_room_tv:
       state: off
       transition: 2
-    light.family_room_ceiling_level_6_0:
+    light.family_room_ceiling_level:
       state: off
 
 - name: Family Room - Relax
@@ -68,7 +68,7 @@
       state: on
       profile: relax
       transition: 2
-    light.family_room_ceiling_level_6_0:
+    light.family_room_ceiling_level:
       state: on
       brightness: 127
 
@@ -86,7 +86,7 @@
       state: on
       profile: reading
       transition: 2
-    light.family_room_ceiling_level_6_0:
+    light.family_room_ceiling_level:
       state: on
       brightness: 254
 
@@ -104,7 +104,7 @@
       state: on
       profile: relax
       transition: 2
-    light.family_room_ceiling_level_6_0:
+    light.family_room_ceiling_level:
       state: off
 
 #
@@ -244,7 +244,7 @@
       color_name: green
       brightness: 254
       transition: 2
-    light.family_room_ceiling_level_6_0:
+    light.family_room_ceiling_level:
       state: off
     light.kitchen_1:
       state: on
@@ -271,5 +271,3 @@
       color_name: green
       brightness: 127
       transition: 2
-    switch.ps_general1_switch_10_0:
-      state: on
