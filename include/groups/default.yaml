@@ -25,7 +25,7 @@ Water System:
 
 Cameras:
   entities:
+    - camera.garage
     - camera.front_door
     - camera.back_door
-    - camera.garage
     - camera.misc
