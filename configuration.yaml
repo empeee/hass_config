@@ -28,7 +28,7 @@ logger: !include include/logger.yaml
 media_player: !include include/media_player.yaml
 notify: !include include/notify.yaml
 recorder: !include include/recorder.yaml
-scene: !include include/scene.yaml
+scene: !include_dir_merge_list include/scenes
 sensor: !include_dir_merge_list include/sensors
 sun:
 updater:
