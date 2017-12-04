@@ -1,7 +1,7 @@
-include:
-  domains:
-    - sensor
-    - climate
-    - input_boolean
-    - device_tracker
-    - media_player
+#include:
+#  domains:
+#    - sensor
+#    - climate
+#    - input_boolean
+#    - device_tracker
+#    - media_player
