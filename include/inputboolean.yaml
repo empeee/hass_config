@@ -6,8 +6,20 @@ guest_mode:
   name: Guest Mode
   icon: mdi:account
 
-flux:
-  name: Flux Lights
+flux_basement:
+  name: Flux Basement Lights
+  icon: mdi:lightbulb
+
+flux_living_room:
+  name: Flux Living Room Lights
+  icon: mdi:lightbulb
+
+flux_family_room:
+  name: Flux Family Room Lights
+  icon: mdi:lightbulb
+
+flux_kitchen:
+  name: Flux Kitchen Lights
   icon: mdi:lightbulb
 
 motion_downstairs:

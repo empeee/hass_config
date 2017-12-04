@@ -6,6 +6,7 @@ default_view:
   icon: mdi:home
   entities:
     - group.home_settings
+    - group.flux_settings
     - group.presence
     - group.water_system
     - camera.home_camera

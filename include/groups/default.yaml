@@ -5,10 +5,16 @@ Home Settings:
   entities:
     - input_boolean.vacation_mode
     - input_boolean.guest_mode
-    - input_boolean.flux
     - input_boolean.heat_automation
     - input_boolean.cool_automation
     - alarm_control_panel.pude_farm
+
+Flux Settings:
+  entities:
+    - input_boolean.flux_basement
+    - input_boolean.flux_living_room
+    - input_boolean.flux_family_room
+    - input_boolean.flux_kitchen
 
 Presence:
   entities:
