@@ -21,6 +21,7 @@ Lights:
     - group.family_room_scenes
     - group.living_room_scenes
     - group.kitchen_scenes
+    - group.basement_scenes
     - group.outside_lights
 
 Climate:

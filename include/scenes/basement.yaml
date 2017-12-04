@@ -1,0 +1,28 @@
+#
+# Basement Scenes
+#
+- name: Basement - Normal
+  entities:
+    input_boolean.flux_basement:
+      state: on
+    light.basement_couch:
+      state: on
+      brightness: 254
+      transition: 2
+    light.basement_toys:
+      state: on
+      brightness: 254
+      transition: 2
+
+- name: Basement - Relax
+  entities:
+    input_boolean.flux_basement:
+      state: on
+    light.basement_couch:
+      state: on
+      brightness: 154
+      transition: 2
+    light.basement_toys:
+      state: on
+      brightness: 154
+      transition: 2

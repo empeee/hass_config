@@ -24,3 +24,8 @@ Kitchen Scenes:
     - scene.kitchen__normal
     - scene.kitchen__relax
     - scene.kitchen__night
+
+Basement Scenes:
+  entities:
+    - scene.basement__normal
+    - scene.basement__relax
