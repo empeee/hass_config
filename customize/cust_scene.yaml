@@ -1,39 +1,32 @@
 scene.night_home:
   icon: mdi:weather-night
-#  emulated_hue: true
 scene.night_away:
   icon: mdi:weather-night
-#  emulated_hue: true
 scene.whole_house_christmas:
   icon: mdi:gift
-#  emulated_hue: true
   
 scene.family_room__normal:
   icon: mdi:home
-#  emulated_hue: true
 scene.family_room__relax:
   icon: mdi:book-open-page-variant
-#  emulated_hue: true
 scene.family_room__full:
   icon: mdi:lightbulb
-#  emulated_hue: true
 scene.family_room__watch_tv:
   icon: mdi:television
-#  emulated_hue: true
 
 scene.living_room__normal:
   icon: mdi:home
-#  emulated_hue: true
 scene.living_room__relax:
   icon: mdi:book-open-page-variant
-#  emulated_hue: true
 
 scene.kitchen__normal:
   icon: mdi:home
-#  emulated_hue: true
 scene.kitchen__relax:
   icon: mdi:book-open-page-variant
-#  emulated_hue: true
 scene.kitchen__night:
   icon: mdi:weather-night
-#  emulated_hue: true
+
+scene.basement__normal:
+  icon: mdi:home
+scene.basement__relax:
+  icon: mdi:book-open-page-variant
