@@ -8,10 +8,12 @@
     light.family_room_piano:
       state: on
       brightness: 254
+      kelvin: 3000
       transition: 2
     light.family_room_games:
       state: on
       brightness: 254
+      kelvin: 3000
       transition: 2
     light.family_room_tv:
       state: off
@@ -26,18 +28,22 @@
     light.family_room_piano:
       state: on
       brightness: 154
+      kelvin: 3000
       transition: 2
     light.family_room_games:
       state: on
       brightness: 154
+      kelvin: 3000
       transition: 2
     light.family_room_tv:
       state: on
       brightness: 154
+      kelvin: 3000
       transition: 2
     light.family_room_ceiling_level:
       state: on
       brightness: 154
+      kelvin: 3000
 
 - name: Family Room - Full
   entities:
@@ -46,18 +52,22 @@
     light.family_room_piano:
       state: on
       brightness: 254
+      kelvin: 3000
       transition: 2
     light.family_room_games:
       state: on
       brightness: 254
+      kelvin: 3000
       transition: 2
     light.family_room_tv:
       state: on
       brightness: 254
+      kelvin: 3000
       transition: 2
     light.family_room_ceiling_level:
       state: on
       brightness: 254
+      kelvin: 3000
 
 - name: Family Room - Watch TV
   entities:
@@ -66,14 +76,17 @@
     light.family_room_piano:
       state: on
       brightness: 254
+      kelvin: 3000
       transition: 2
     light.family_room_games:
       state: on
       brightness: 254
+      kelvin: 3000
       transition: 2
     light.family_room_tv:
       state: on
       brightness: 154
+      kelvin: 3000
       transition: 2
     light.family_room_ceiling_level:
       state: off

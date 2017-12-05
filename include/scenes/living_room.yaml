@@ -8,14 +8,17 @@
     light.living_room_lamp:
       state: on
       brightness: 254
+      kelvin: 3000
       transition: 2
     light.living_room_tall_lamp:
       state: on
       brightness: 254
+      kelvin: 3000
       transition: 2
     light.living_room_coffee_lamp:
       state: on
       brightness: 254
+      kelvin: 3000
       transition: 2
 
 - name: Living Room - Relax
@@ -25,12 +28,15 @@
     light.living_room_lamp:
       state: on
       brightness: 154
+      kelvin: 3000
       transition: 2
     light.living_room_tall_lamp:
       state: on
       brightness: 154
+      kelvin: 3000
       transition: 2
     light.living_room_coffee_lamp:
       state: on
       brightness: 154
+      kelvin: 3000
       transition: 2
