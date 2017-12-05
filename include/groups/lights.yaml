@@ -13,6 +13,7 @@ Family Room Scenes:
     - scene.family_room__relax
     - scene.family_room__full
     - scene.family_room__watch_tv
+    - scene.family_room__watch_movie
 
 Living Room Scenes:
   entities:

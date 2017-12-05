@@ -8,27 +8,27 @@
     light.kitchen_1:
       state: on
       brightness: 254
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.kitchen_2:
       state: on
       brightness: 254
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.kitchen_3:
       state: on
       brightness: 254
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.kitchen_4:
       state: on
       brightness: 254
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.kitchen_5:
       state: on
       brightness: 254
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
 
 - name: Kitchen - Relax
@@ -38,33 +38,33 @@
     light.kitchen_1:
       state: on
       brightness: 154
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.kitchen_2:
       state: on
       brightness: 154
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.kitchen_3:
       state: on
       brightness: 154
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.kitchen_4:
       state: on
       brightness: 154
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.kitchen_5:
       state: on
       brightness: 154
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
 
 - name: Kitchen - Night
   entities:
     input_boolean.flux_kitchen:
-      state: on
+      state: off
     light.kitchen_1:
       state: off
       transition: 2
@@ -77,7 +77,6 @@
     light.kitchen_4:
       state: on
       brightness: 1
-      kelvin: 3000
       xy_color: [0.561,0.4042]
       transition: 2
     light.kitchen_5:

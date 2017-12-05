@@ -8,12 +8,12 @@
     light.family_room_piano:
       state: on
       brightness: 254
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.family_room_games:
       state: on
       brightness: 254
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.family_room_tv:
       state: off
@@ -28,22 +28,22 @@
     light.family_room_piano:
       state: on
       brightness: 154
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.family_room_games:
       state: on
       brightness: 154
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.family_room_tv:
       state: on
       brightness: 154
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.family_room_ceiling_level:
       state: on
       brightness: 154
-      kelvin: 3000
+      kelvin: 2800
 
 - name: Family Room - Full
   entities:
@@ -52,22 +52,22 @@
     light.family_room_piano:
       state: on
       brightness: 254
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.family_room_games:
       state: on
       brightness: 254
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.family_room_tv:
       state: on
       brightness: 254
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.family_room_ceiling_level:
       state: on
       brightness: 254
-      kelvin: 3000
+      kelvin: 2800
 
 - name: Family Room - Watch TV
   entities:
@@ -75,18 +75,40 @@
       state: on
     light.family_room_piano:
       state: on
-      brightness: 254
-      kelvin: 3000
+      brightness: 154
+      kelvin: 2800
       transition: 2
     light.family_room_games:
       state: on
-      brightness: 254
-      kelvin: 3000
+      brightness: 154
+      kelvin: 2800
       transition: 2
     light.family_room_tv:
       state: on
-      brightness: 154
-      kelvin: 3000
+      brightness: 54
+      kelvin: 2800
+      transition: 2
+    light.family_room_ceiling_level:
+      state: off
+
+- name: Family Room - Watch Movie
+  entities:
+    input_boolean.flux_family_room:
+      state: off
+    light.family_room_piano:
+      state: on
+      brightness: 50
+      kelvin: 500
+      transition: 2
+    light.family_room_games:
+      state: on
+      brightness: 50
+      kelvin: 500
+      transition: 2
+    light.family_room_tv:
+      state: on
+      brightness: 50
+      kelvin: 500
       transition: 2
     light.family_room_ceiling_level:
       state: off

@@ -8,12 +8,12 @@
     light.basement_couch:
       state: on
       brightness: 254
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.basement_toys:
       state: on
       brightness: 254
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
 
 - name: Basement - Relax
@@ -23,10 +23,10 @@
     light.basement_couch:
       state: on
       brightness: 154
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
     light.basement_toys:
       state: on
       brightness: 154
-      kelvin: 3000
+      kelvin: 2800
       transition: 2
