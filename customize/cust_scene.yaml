@@ -1,54 +1,51 @@
-scene.night_home:
-  icon: mdi:weather-night
-  emulated_hue_hidden: false
-scene.night_away:
-  icon: mdi:weather-night
-scene.whole_house_christmas:
+scene.all_lights__normal:
+  icon: mdi:home
+scene.all_lights__off:
+  icon: mdi:power
+scene.christmas_lights:
   icon: mdi:gift
-  emulated_hue_hidden: false
   
-scene.family_room__normal:
+scene.family_room_lights__normal:
   icon: mdi:home
-  emulated_hue_hidden: false
-scene.family_room__relax:
+scene.family_room_lights__relax:
   icon: mdi:book-open-page-variant
-  emulated_hue_hidden: false
-scene.family_room__full:
+scene.family_room_lights__full:
   icon: mdi:lightbulb
-  emulated_hue_hidden: false
-scene.family_room__watch_tv:
+scene.family_room_lights__watch_tv:
   icon: mdi:television
-  emulated_hue_hidden: false
-scene.family_room__watch_movie:
+scene.family_room_lights__watch_movie:
   icon: mdi:television
-  emulated_hue_hidden: false
-scene.family_room__away:
+scene.family_room_lights__away:
   icon: mdi:beach
-  emulated_hue_hidden: false
+scene.family_room_lights__off:
+  icon: mdi:power
 
-scene.living_room__normal:
+scene.living_room_lights__normal:
   icon: mdi:home
-  emulated_hue_hidden: false
-scene.living_room__relax:
+scene.living_room_lights__relax:
   icon: mdi:book-open-page-variant
-  emulated_hue_hidden: false
-scene.living_room__away:
+scene.living_room_lights__away:
   icon: mdi:beach
-  emulated_hue_hidden: false
+scene.living_room_lights__off:
+  icon: mdi:power
 
-scene.kitchen__normal:
+scene.kitchen_lights__normal:
   icon: mdi:home
-  emulated_hue_hidden: false
-scene.kitchen__relax:
+scene.kitchen_lights__relax:
   icon: mdi:book-open-page-variant
-  emulated_hue_hidden: false
-scene.kitchen__night:
+scene.kitchen_lights__night:
   icon: mdi:weather-night
-  emulated_hue_hidden: false
+scene.kitchen_lights__off:
+  icon: mdi:power
 
-scene.basement__normal:
+scene.basement_lights__normal:
   icon: mdi:home
-  emulated_hue_hidden: false
-scene.basement__relax:
+scene.basement_lights__relax:
   icon: mdi:book-open-page-variant
-  emulated_hue_hidden: false
+scene.basement_lights__off:
+  icon: mdi:power
+
+scene.outside_lights__normal:
+  icon: mdi:home
+scene.outside_lights__off:
+  icon: mdi:power
