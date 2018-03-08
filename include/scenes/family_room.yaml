@@ -24,26 +24,26 @@
 - name: Family Room - Relax
   entities:
     input_boolean.flux_family_room:
-      state: on
+      state: off
     light.family_room_piano:
       state: on
       brightness: 154
-      kelvin: 2800
+      kelvin: 2200
       transition: 2
     light.family_room_games:
       state: on
       brightness: 154
-      kelvin: 2800
+      kelvin: 2200
       transition: 2
     light.family_room_tv:
       state: on
       brightness: 154
-      kelvin: 2800
+      kelvin: 2200
       transition: 2
     light.family_room_ceiling_level:
       state: on
       brightness: 154
-      kelvin: 2800
+      kelvin: 2200
 
 - name: Family Room - Full
   entities:
@@ -72,21 +72,21 @@
 - name: Family Room - Watch TV
   entities:
     input_boolean.flux_family_room:
-      state: on
+      state: off
     light.family_room_piano:
       state: on
       brightness: 154
-      kelvin: 2800
+      kelvin: 2200
       transition: 2
     light.family_room_games:
       state: on
       brightness: 154
-      kelvin: 2800
+      kelvin: 2200
       transition: 2
     light.family_room_tv:
       state: on
       brightness: 54
-      kelvin: 2800
+      kelvin: 2200
       transition: 2
     light.family_room_ceiling_level:
       state: off
@@ -112,3 +112,13 @@
       transition: 2
     light.family_room_ceiling_level:
       state: off
+
+- name: Family Room - Away
+  entities:
+    input_boolean.flux_family_room:
+      state: off
+    light.family_room_piano:
+      state: on
+      brightness: 254
+      kelvin: 2200
+      transition: 2
