@@ -295,3 +295,39 @@ media_player.shield_family_room:
 media_player.pixel_2:
   platform: plex
   unique_id: c9ffdbe470ea5604-com-plexapp-android
+media_player.nexus_player:
+  platform: plex
+  unique_id: baf00957d412b7c2-com-plexapp-android
+media_player.jakes_ipad:
+  platform: plex
+  unique_id: F7FD4DFD-4E4E-48DA-9EE3-6D7B6DE28875
+media_player.shield_basement:
+  platform: plex
+  unique_id: 8c632dac9724e715-com-plexapp-android
+media_player.plex_web_chrome:
+  platform: plex
+  unique_id: pyp0bz47rtlrlfddoc44niqx
+media_player.laundry_room_tv:
+  platform: cast
+  unique_id: 6ea49444-3168-fa25-d04b-bd86be2ecfd8
+media_player.basement_tv:
+  platform: cast
+  unique_id: 8da05e4a-c6aa-f33d-dc4b-eb0fb14473d8
+media_player.kitchen_home:
+  platform: cast
+  unique_id: e70431e6-17e0-9a03-fd97-9c4238a4fec4
+media_player.family_room_tv:
+  platform: cast
+  unique_id: e2f5cec7-ce01-7683-0eff-6973cc7e6475
+media_player.family_room_home:
+  platform: cast
+  unique_id: b655f125-a180-46a1-233d-e4a39ed47cc1
+media_player.xbr65x850d:
+  platform: cast
+  unique_id: 659f231f-b0d0-4261-ebcd-7f24f2b85c0c
+media_player.both_rooms:
+  platform: cast
+  unique_id: c8745693-5060-4050-b464-53900d177661
+media_player.bedroom_tv:
+  platform: cast
+  unique_id: e55a8249-8ce6-cbd8-def6-84533013424e
