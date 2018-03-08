@@ -34,6 +34,5 @@ sun:
 updater:
 wink:
 zwave: !include include/zwave.yaml
-hue:
-  bridges:
-    - host: 192.168.86.22
+hue: !include include/hue.yaml
+google_assistant: !include include/google_assistant.yaml
