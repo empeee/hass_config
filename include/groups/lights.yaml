@@ -4,7 +4,6 @@
 Whole House Scenes:
   entities:
     - scene.all_lights__normal
-    - scene.all_lights__off
     - scene.christmas_lights
 
 Family Room Scenes:
@@ -15,29 +14,24 @@ Family Room Scenes:
     - scene.family_room_lights__watch_tv
     - scene.family_room_lights__watch_movie
     - scene.family_room_lights__away
-    - scene.family_room_lights__off
 
 Living Room Scenes:
   entities:
     - scene.living_room_lights__normal
     - scene.living_room_lights__relax
     - scene.living_room_lights__away
-    - scene.living_room_lights__off
 
 Kitchen Scenes:
   entities:
     - scene.kitchen_lights__normal
     - scene.kitchen_lights__relax
     - scene.kitchen_lights__night
-    - scene.kitchen_lights__off
 
 Basement Scenes:
   entities:
     - scene.basement_lights__normal
     - scene.basement_lights__relax
-    - scene.basement_lights__off
 
 Outside Scenes:
   entities:
     - scene.outside_lights__normal
-    - scene.outside_lights__off

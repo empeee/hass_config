@@ -82,18 +82,3 @@
     light.kitchen_5:
       state: off
       transition: 2
-
-- name: Kitchen Lights - Off
-  entities:
-    input_boolean.flux_kitchen:
-      state: on
-    light.kitchen_1:
-      state: off
-    light.kitchen_2:
-      state: off
-    light.kitchen_3:
-      state: off
-    light.kitchen_4:
-      state: off
-    light.kitchen_5:
-      state: off

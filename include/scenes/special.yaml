@@ -29,12 +29,12 @@
       color_name: green
       brightness: 254
       transition: 2
-    light.family_room_tv:
+    light.family_room_tv_light:
       state: on
       color_name: red
       brightness: 254
       transition: 2
-    light.family_room_games:
+    light.family_room_couch:
       state: on
       color_name: green
       brightness: 254
@@ -66,43 +66,6 @@
       color_name: green
       brightness: 127
       transition: 2
-
-- name: All Lights - Off
-  entities:
-    input_boolean.flux_living_room:
-      state: on
-    input_boolean.flux_family_room:
-      state: on
-    input_boolean.flux_kitchen:
-      state: on
-    light.living_room_lamp:
-      state: off
-    light.living_room_tall_lamp:
-      state: off
-    light.living_room_coffee_lamp:
-      state: off
-    light.family_room_piano:
-      state: off
-    light.family_room_tv:
-      state: off
-    light.family_room_games:
-      state: off
-    light.family_room_ceiling_level:
-      state: off
-    light.kitchen_1:
-      state: off
-    light.kitchen_2:
-      state: off
-    light.kitchen_3:
-      state: off
-    light.kitchen_4:
-      state: off
-    light.kitchen_5:
-      state: off
-    switch.outside_front_porch_switch:
-      state: off
-    switch.outside_garage_switch:
-      state: off
 
 - name: All Lights - Normal
   entities:
@@ -132,9 +95,9 @@
       brightness: 254
       kelvin: 2800
       transition: 2
-    light.family_room_tv:
+    light.family_room_tv_light:
       state: off
-    light.family_room_games:
+    light.family_room_couch:
       state: on
       brightness: 254
       kelvin: 2800

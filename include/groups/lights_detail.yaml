@@ -4,9 +4,9 @@
 Family Room Lights:
   entities:
     - light.family_room_ceiling_level
-    - light.family_room_games
+    - light.family_room_couch
     - light.family_room_piano
-    - light.family_room_tv
+    - light.family_room_tv_light
 
 Living Room Lights:
   entities:

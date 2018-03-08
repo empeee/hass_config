@@ -256,10 +256,10 @@ light.living_room_tall_lamp:
 light.family_room_piano:
   platform: hue
   unique_id: 00:17:88:01:02:04:02:20-0b
-light.family_room_games:
+light.family_room_couch:
   platform: hue
   unique_id: 00:17:88:01:02:04:00:d5-0b
-light.family_room_tv:
+light.family_room_tv_light:
   platform: hue
   unique_id: 00:17:88:01:01:1b:48:94-0b
 light.kitchen_1:
@@ -331,3 +331,6 @@ media_player.both_rooms:
 media_player.bedroom_tv:
   platform: cast
   unique_id: e55a8249-8ce6-cbd8-def6-84533013424e
+media_player.plex_web_chrome_2:
+  platform: plex
+  unique_id: ct0wdgt1jw4eiunt33hiugou

@@ -36,14 +36,3 @@
     light.basement_bedroom:
       state: on
       brightness: 154
-
-- name: Basement Lights - Off
-  entities:
-    input_boolean.flux_basement:
-      state: on
-    light.basement_couch:
-      state: off
-    light.basement_toys:
-      state: off
-    light.basement_bedroom:
-      state: off
