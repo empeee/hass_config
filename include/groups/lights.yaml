@@ -14,11 +14,13 @@ Family Room Scenes:
     - scene.family_room__full
     - scene.family_room__watch_tv
     - scene.family_room__watch_movie
+    - scene.family_room__away
 
 Living Room Scenes:
   entities:
     - scene.living_room__normal
     - scene.living_room__relax
+    - scene.living_room__away
 
 Kitchen Scenes:
   entities:
