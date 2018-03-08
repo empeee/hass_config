@@ -22,12 +22,18 @@ scene.family_room__watch_tv:
 scene.family_room__watch_movie:
   icon: mdi:television
   emulated_hue_hidden: false
+scene.family_room__away:
+  icon: mdi:beach
+  emulated_hue_hidden: false
 
 scene.living_room__normal:
   icon: mdi:home
   emulated_hue_hidden: false
 scene.living_room__relax:
   icon: mdi:book-open-page-variant
+  emulated_hue_hidden: false
+scene.living_room__away:
+  icon: mdi:beach
   emulated_hue_hidden: false
 
 scene.kitchen__normal:
