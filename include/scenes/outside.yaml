@@ -1,0 +1,17 @@
+#
+# Outside Scenes
+#
+- name: Outside Lights - Normal
+  entities:
+    switch.outside_front_porch_switch:
+      state: on
+    switch.outside_garage_switch:
+      state: on
+
+- name: Outside Lights - Off
+  entities:
+    switch.outside_front_porch_switch:
+      state: off
+    switch.outside_garage_switch:
+      state: off
+
