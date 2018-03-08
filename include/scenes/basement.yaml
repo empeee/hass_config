@@ -19,14 +19,14 @@
 - name: Basement - Relax
   entities:
     input_boolean.flux_basement:
-      state: on
+      state: off
     light.basement_couch:
       state: on
       brightness: 154
-      kelvin: 2800
+      kelvin: 2200
       transition: 2
     light.basement_toys:
       state: on
       brightness: 154
-      kelvin: 2800
+      kelvin: 2200
       transition: 2
