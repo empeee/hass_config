@@ -34,31 +34,31 @@
 - name: Kitchen - Relax
   entities:
     input_boolean.flux_kitchen:
-      state: on
+      state: off
     light.kitchen_1:
       state: on
       brightness: 154
-      kelvin: 2800
+      kelvin: 2200
       transition: 2
     light.kitchen_2:
       state: on
       brightness: 154
-      kelvin: 2800
+      kelvin: 2200
       transition: 2
     light.kitchen_3:
       state: on
       brightness: 154
-      kelvin: 2800
+      kelvin: 2200
       transition: 2
     light.kitchen_4:
       state: on
       brightness: 154
-      kelvin: 2800
+      kelvin: 2200
       transition: 2
     light.kitchen_5:
       state: on
       brightness: 154
-      kelvin: 2800
+      kelvin: 2200
       transition: 2
 
 - name: Kitchen - Night
