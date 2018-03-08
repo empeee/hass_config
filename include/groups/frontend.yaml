@@ -22,7 +22,7 @@ Lights:
     - group.living_room_scenes
     - group.kitchen_scenes
     - group.basement_scenes
-    - group.outside_lights
+    - group.outside_scenes
 
 Climate:
   view: yes
