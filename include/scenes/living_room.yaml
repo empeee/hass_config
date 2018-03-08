@@ -1,7 +1,7 @@
 #
-# Living Room Scenes
+# Living Room Lights Scenes
 #
-- name: Living Room - Normal
+- name: Living Room Lights - Normal
   entities:
     input_boolean.flux_living_room:
       state: on
@@ -21,7 +21,7 @@
       kelvin: 2800
       transition: 2
 
-- name: Living Room - Relax
+- name: Living Room Lights - Relax
   entities:
     input_boolean.flux_living_room:
       state: off
@@ -41,7 +41,7 @@
       kelvin: 2200
       transition: 2
 
-- name: Living Room - Away
+- name: Living Room Lights - Away
   entities:
     input_boolean.flux_living_room:
       state: off
@@ -50,3 +50,14 @@
       brightness: 254
       kelvin: 2200
       transition: 2
+
+- name: Living Room Lights - Off
+  entities:
+    input_boolean.flux_living_room:
+      state: on
+    light.living_room_lamp:
+      state: off
+    light.living_room_tall_lamp:
+      state: off
+    light.living_room_coffee_lamp:
+      state: off

@@ -1,7 +1,7 @@
 #
-# Kitchen Scenes
+# Kitchen Lights Scenes
 #
-- name: Kitchen - Normal
+- name: Kitchen Lights - Normal
   entities:
     input_boolean.flux_kitchen:
       state: on
@@ -31,7 +31,7 @@
       kelvin: 2800
       transition: 2
 
-- name: Kitchen - Relax
+- name: Kitchen Lights - Relax
   entities:
     input_boolean.flux_kitchen:
       state: off
@@ -61,7 +61,7 @@
       kelvin: 2200
       transition: 2
 
-- name: Kitchen - Night
+- name: Kitchen Lights - Night
   entities:
     input_boolean.flux_kitchen:
       state: off
@@ -82,3 +82,18 @@
     light.kitchen_5:
       state: off
       transition: 2
+
+- name: Kitchen Lights - Off
+  entities:
+    input_boolean.flux_kitchen:
+      state: on
+    light.kitchen_1:
+      state: off
+    light.kitchen_2:
+      state: off
+    light.kitchen_3:
+      state: off
+    light.kitchen_4:
+      state: off
+    light.kitchen_5:
+      state: off

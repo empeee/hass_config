@@ -1,7 +1,7 @@
 #
 # Basement Scenes
 #
-- name: Basement - Normal
+- name: Basement Lights - Normal
   entities:
     input_boolean.flux_basement:
       state: on
@@ -15,8 +15,11 @@
       brightness: 254
       kelvin: 2800
       transition: 2
+    light.basement_bedroom:
+      state: on
+      brightness: 254
 
-- name: Basement - Relax
+- name: Basement Lights - Relax
   entities:
     input_boolean.flux_basement:
       state: off
@@ -30,3 +33,17 @@
       brightness: 154
       kelvin: 2200
       transition: 2
+    light.basement_bedroom:
+      state: on
+      brightness: 154
+
+- name: Basement Lights - Off
+  entities:
+    input_boolean.flux_basement:
+      state: on
+    light.basement_couch:
+      state: off
+    light.basement_toys:
+      state: off
+    light.basement_bedroom:
+      state: off

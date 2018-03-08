@@ -1,7 +1,7 @@
 #
-# Family Room Scenes
+# Family Room Lights Scenes
 #
-- name: Family Room - Normal
+- name: Family Room Lights - Normal
   entities:
     input_boolean.flux_family_room:
       state: on
@@ -21,7 +21,7 @@
     light.family_room_ceiling_level:
       state: off
 
-- name: Family Room - Relax
+- name: Family Room Lights - Relax
   entities:
     input_boolean.flux_family_room:
       state: off
@@ -45,7 +45,7 @@
       brightness: 154
       kelvin: 2200
 
-- name: Family Room - Full
+- name: Family Room Lights - Full
   entities:
     input_boolean.flux_family_room:
       state: on
@@ -69,7 +69,7 @@
       brightness: 254
       kelvin: 2800
 
-- name: Family Room - Watch TV
+- name: Family Room Lights - Watch TV
   entities:
     input_boolean.flux_family_room:
       state: off
@@ -91,7 +91,7 @@
     light.family_room_ceiling_level:
       state: off
 
-- name: Family Room - Watch Movie
+- name: Family Room Lights - Watch Movie
   entities:
     input_boolean.flux_family_room:
       state: off
@@ -113,7 +113,7 @@
     light.family_room_ceiling_level:
       state: off
 
-- name: Family Room - Away
+- name: Family Room Lights - Away
   entities:
     input_boolean.flux_family_room:
       state: off
@@ -122,3 +122,16 @@
       brightness: 254
       kelvin: 2200
       transition: 2
+
+- name: Family Room Lights - Off
+  entities:
+    input_boolean.flux_family_room:
+      state: on
+    light.family_room_piano:
+      state: off
+    light.family_room_games:
+      state: off
+    light.family_room_tv:
+      state: off
+    light.family_room_ceiling_level:
+      state: off
