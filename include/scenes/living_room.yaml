@@ -24,19 +24,29 @@
 - name: Living Room - Relax
   entities:
     input_boolean.flux_living_room:
-      state: on
+      state: off
     light.living_room_lamp:
       state: on
       brightness: 154
-      kelvin: 2800
+      kelvin: 2200
       transition: 2
     light.living_room_tall_lamp:
       state: on
       brightness: 154
-      kelvin: 2800
+      kelvin: 2200
       transition: 2
     light.living_room_coffee_lamp:
       state: on
       brightness: 154
-      kelvin: 2800
+      kelvin: 2200
+      transition: 2
+
+- name: Living Room - Away
+  entities:
+    input_boolean.flux_living_room:
+      state: off
+    light.living_room_tall_lamp:
+      state: on
+      brightness: 254
+      kelvin: 2200
       transition: 2
