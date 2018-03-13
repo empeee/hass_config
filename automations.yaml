@@ -197,9 +197,9 @@
     service: scene.turn_on
     data:
       entity_id: 
-        - scene.family_room__normal
-        - scene.living_room__normal
-        - scene.kitchen__normal
+        - scene.family_room_lights__normal
+        - scene.living_room_lights__normal
+        - scene.kitchen_lights__normal
 
 # Turn everything off at midnight
 - id: light_midnight_off
@@ -248,8 +248,8 @@
     service: scene.turn_on
     data:
       entity_id: 
-        - scene.family_room__away
-        - scene.living_room__away
+        - scene.family_room_lights__away
+        - scene.living_room_lights__away
 
 # Transition on lights when not in vacation mode
 - id: light_sunset_home
@@ -266,9 +266,9 @@
     service: scene.turn_on
     data:
       entity_id: 
-        - scene.family_room__normal
-        - scene.living_room__normal
-        - scene.kitchen__normal
+        - scene.family_room_lights__normal
+        - scene.living_room_lights__normal
+        - scene.kitchen_lights__normal
 
 # Turn on outside lights regardless of who is home
 - id: light_sunset_outside
@@ -307,8 +307,8 @@
     - service: scene.turn_on
       data:
         entity_id: 
-          - scene.family_room__away
-          - scene.living_room__away
+          - scene.family_room_lights__away
+          - scene.living_room_lights__away
 
 - id: motion_basement_still_to_motion
   alias: Motion Basement - Still-to-Motion
