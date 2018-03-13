@@ -9,10 +9,13 @@ entity_config:
   switch.outside_front_porch_switch:
     expose: true
     name: Outside Front Porch
-    type: light
+#    type: light
   switch.outside_garage_switch:
     expose: true
     name: Outside Garage
-    type: light
+#    type: light
   light.family_room_ceiling_level:
     name: Family Room Ceiling
+  input_boolean.vacation_mode:
+    expose: true
+#    type: switch
