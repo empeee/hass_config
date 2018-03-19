@@ -15,7 +15,7 @@
       brightness: 254
       kelvin: 2800
       transition: 2
-    light.basement_bedroom:
+    light.basement_guest:
       state: on
       brightness: 254
 
@@ -33,6 +33,6 @@
       brightness: 154
       kelvin: 2200
       transition: 2
-    light.basement_bedroom:
+    light.basement_guest:
       state: on
       brightness: 154
