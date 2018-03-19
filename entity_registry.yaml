@@ -277,7 +277,7 @@ light.kitchen_3:
 light.kitchen_2:
   platform: hue
   unique_id: 00:17:88:01:02:21:78:f9-0b
-light.basement_bedroom:
+light.basement_guest:
   platform: hue
   unique_id: 00:17:88:01:02:3f:d3:e5-0b
 light.basement_couch:
@@ -334,3 +334,15 @@ media_player.bedroom_tv:
 media_player.plex_web_chrome_2:
   platform: plex
   unique_id: ct0wdgt1jw4eiunt33hiugou
+media_player.bedroom_speaker:
+  platform: cast
+  unique_id: e28bf8fc-d794-274e-cfd4-1b3246968f49
+media_player.basement_speaker:
+  platform: cast
+  unique_id: ab75f7e1-3dcc-d78c-1520-151689a83e4b
+media_player.chrome:
+  platform: plex
+  unique_id: 23x5550qi9ngd4d2i72kz72d
+media_player.home_group:
+  platform: cast
+  unique_id: 10756732-154e-4e88-84ed-21ae5fb2fffb
