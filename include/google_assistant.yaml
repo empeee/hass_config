@@ -3,22 +3,8 @@ client_id: !secret ga_client_id
 access_token: !secret ga_access_token
 agent_user_id: !secret ga_agent_id
 api_key: !secret ga_api_key
-#expose_by_default: false
-exposed_domains:
-  - scene
-  - light
-#  - climate
+expose_by_default: false
 entity_config:
-  switch.outside_front_porch_switch:
-    expose: true
-    name: Outside Front Porch
-  switch.outside_garage_switch:
-    expose: true
-    name: Outside Garage
-  light.family_room_ceiling_level:
-    name: Family Room Ceiling
-  input_boolean.vacation_mode:
-    expose: true
   climate.living_room_heating_1:
     expose: true
   climate.family_room_heating_1:
@@ -29,3 +15,80 @@ entity_config:
     expose: true
   climate.upstairs_hall_cooling_1:
     expose: true
+  input_boolean.vacation_mode:
+    expose: true
+  light.basement_couch:
+    expose: true
+  light.basement_guest:
+    expose: true
+  light.basement_toys:
+    expose: true
+  light.bedroom_bed:
+    expose: true
+  light.bedroom_chair:
+    expose: true
+  light.family_room_ceiling_level:
+    expose: true
+    name: Family Room Ceiling
+  light.family_room_couch:
+    expose: true
+  light.family_room_piano:
+    expose: true
+  light.family_room_tv_light:
+    expose: true
+  light.kitchen_1:
+    expose: true
+  light.kitchen_2:
+    expose: true
+  light.kitchen_3:
+    expose: true
+  light.kitchen_4:
+    expose: true
+  light.kitchen_5:
+    expose: true
+  light.living_room_coffee_lamp:
+    expose: true
+  light.living_room_lamp:
+    expose: true
+  light.living_room_tall_lamp:
+    expose: true
+  scene.all_lights__normal:
+    expose: true
+  scene.basement_lights__normal:
+    expose: true
+  scene.basement_lights__relax:
+    expose: true
+  scene.christmas_lights:
+    expose: true
+  scene.family_room_lights__away:
+    expose: true
+  scene.family_room_lights__full:
+    expose: true
+  scene.family_room_lights__normal:
+    expose: true
+  scene.family_room_lights__relax:
+    expose: true
+  scene.family_room_lights__watch_movie:
+    expose: true
+  scene.family_room_lights__watch_tv:
+    expose: true
+  scene.kitchen_lights__night:
+    expose: true
+  scene.kitchen_lights__normal:
+    expose: true
+  scene.kitchen_lights__relax:
+    expose: true
+  scene.living_room_lights__away:
+    expose: true
+  scene.living_room_lights__normal:
+    expose: true
+  scene.living_room_lights__relax:
+    expose: true
+  scene.outside_lights__normal:
+    expose: true
+  switch.outside_front_porch_switch:
+    expose: true
+    name: Outside Front Porch
+  switch.outside_garage_switch:
+    expose: true
+    name: Outside Garage
