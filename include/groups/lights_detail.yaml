@@ -22,9 +22,14 @@ Kitchen Lights:
     - light.kitchen_4
     - light.kitchen_5
 
+Bedroom Lights:
+  entities:
+    - light.bedroom_bed
+    - light.bedroom_chair
+
 Basement Lights:
   entities:
-    - light.basement_bedroom
+    - light.basement_guest
     - light.basement_toys
     - light.basement_couch
 
