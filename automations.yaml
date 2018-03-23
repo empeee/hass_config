@@ -1,212 +1,191 @@
-# Turn cool on when Enable Cooling switch is on
 - id: climate_cool_switch_on
   alias: Climate Cool Switch On
   trigger:
-    - platform: state
-      entity_id: input_boolean.cool_automation
-      to: 'on'
+  - platform: state
+    entity_id: input_boolean.cool_automation
+    to: 'on'
   action:
-    - service: climate.set_operation_mode
-      data:
-        entity_id: climate.upstairs_hall_cooling_1
-        operation_mode: 'Cool'
-
-# Turn cool off when Enable Cooling switch is off
+  - service: climate.set_operation_mode
+    data:
+      entity_id: climate.upstairs_hall_cooling_1
+      operation_mode: Cool
 - id: climate_cool_switch_off
   alias: Climate Cool Switch Off
   trigger:
-    - platform: state
-      entity_id: input_boolean.cool_automation
-      to: 'off'
+  - platform: state
+    entity_id: input_boolean.cool_automation
+    to: 'off'
   action:
-    - service: climate.set_operation_mode
-      data:
-        entity_id: group.cooling_thermostats
-        operation_mode: 'Off'
-
-# Turn heat on when Enable Heating switch is on
+  - service: climate.set_operation_mode
+    data:
+      entity_id: group.cooling_thermostats
+      operation_mode: 'Off'
 - id: climate_heat_switch_on
   alias: Climate Heat Switch On
   trigger:
-    - platform: state
-      entity_id: input_boolean.heat_automation
-      to: 'on'
+  - platform: state
+    entity_id: input_boolean.heat_automation
+    to: 'on'
   action:
-    - service: climate.set_operation_mode
-      data:
-        entity_id: group.downstairs_thermostats
-        operation_mode: 'Heat'
-    - service: climate.set_operation_mode
-      data:
-        entity_id: group.upstairs_thermostats
-        operation_mode: 'Heat'
-
-# Turn heat off when Enable Heating switch is off
+  - service: climate.set_operation_mode
+    data:
+      entity_id: group.downstairs_thermostats
+      operation_mode: Heat
+  - service: climate.set_operation_mode
+    data:
+      entity_id: group.upstairs_thermostats
+      operation_mode: Heat
 - id: climate_heat_switch_off
   alias: Climate Heat Switch Off
   trigger:
-    - platform: state
-      entity_id: input_boolean.heat_automation
-      to: 'off'
+  - platform: state
+    entity_id: input_boolean.heat_automation
+    to: 'off'
   action:
-    - service: climate.set_operation_mode
-      data:
-        entity_id: group.downstairs_thermostats
-        operation_mode: 'Off'
-    - service: climate.set_operation_mode
-      data:
-        entity_id: group.upstairs_thermostats
-        operation_mode: 'Off'
-
-# Set heat low / cool high when vacation mode is turned on
+  - service: climate.set_operation_mode
+    data:
+      entity_id: group.downstairs_thermostats
+      operation_mode: 'Off'
+  - service: climate.set_operation_mode
+    data:
+      entity_id: group.upstairs_thermostats
+      operation_mode: 'Off'
 - id: climate_vacation_switch_on
   alias: Climate Vacation Switch On
   trigger:
-    - platform: state
-      entity_id: input_boolean.vacation_mode
-      to: 'on'
+  - platform: state
+    entity_id: input_boolean.vacation_mode
+    to: 'on'
   action:
-    - service: climate.set_temperature
-      data:
-        entity_id: group.downstairs_thermostats
-        temperature: !secret heat_vacation__downstairs
-    - service: climate.set_temperature
-      data:
-        entity_id: group.upstairs_thermostats
-        temperature: !secret heat_vacation__upstairs
-    - service: climate.set_temperature
-      data:
-        entity_id: group.cooling_thermostats
-        temperature: !secret cool_vacation
-
-# Set heat down in the evening when not in vacation mode
+  - service: climate.set_temperature
+    data:
+      entity_id: group.downstairs_thermostats
+      temperature: 58
+  - service: climate.set_temperature
+    data:
+      entity_id: group.upstairs_thermostats
+      temperature: 58
+  - service: climate.set_temperature
+    data:
+      entity_id: group.cooling_thermostats
+      temperature: 80
 - id: climate_heat_home_night
   alias: Climate Heat Home Night
   trigger:
     platform: time
-    at: "22:00:00"
+    at: '22:00:00'
   condition:
     condition: state
     entity_id: input_boolean.vacation_mode
     state: 'off'
   action:
-    - service: climate.set_temperature
-      data:
-        entity_id: group.downstairs_thermostats
-        temperature: !secret heat_home_evening_downstairs
-    - service: climate.set_temperature
-      data:
-        entity_id: group.upstairs_thermostats
-        temperature: !secret heat_home_evening_upstairs
-
-# Set heat up in the morning when not in vacation mode
+  - service: climate.set_temperature
+    data:
+      entity_id: group.downstairs_thermostats
+      temperature: 60
+  - service: climate.set_temperature
+    data:
+      entity_id: group.upstairs_thermostats
+      temperature: 64
 - id: climate_heat_home_day
   alias: Climate Heat Home Day
   trigger:
     platform: time
-    at: "06:00:00"
+    at: 06:00:00
   condition:
     condition: state
     entity_id: input_boolean.vacation_mode
     state: 'off'
   action:
-    - service: climate.set_temperature
-      data:
-        entity_id: group.downstairs_thermostats
-        temperature: !secret heat_home_morning_downstairs
-    - service: climate.set_temperature
-      data:
-        entity_id: group.upstairs_thermostats
-        temperature: !secret heat_home_morning_upstairs
-
-# Return heat/cool when vacation mode turned off during night hours
+  - service: climate.set_temperature
+    data:
+      entity_id: group.downstairs_thermostats
+      temperature: 68
+  - service: climate.set_temperature
+    data:
+      entity_id: group.upstairs_thermostats
+      temperature: 64
 - id: climate_vacation_switch_off_night
   alias: Climate Vacation Switch Off Night
   trigger:
-    - platform: state
-      entity_id: input_boolean.vacation_mode
-      to: 'off'
+  - platform: state
+    entity_id: input_boolean.vacation_mode
+    to: 'off'
   condition:
     condition: or
     conditions:
-      - condition: time
-        after: '22:00'
-      - condition: time
-        before: '05:59'
+    - condition: time
+      after: '22:00'
+    - condition: time
+      before: 05:59
   action:
-    - service: climate.set_temperature
-      data:
-        entity_id: group.downstairs_thermostats
-        temperature: !secret heat_home_evening_downstairs
-    - service: climate.set_temperature
-      data:
-        entity_id: group.upstairs_thermostats
-        temperature: !secret heat_home_evening_upstairs
-    - service: climate.set_temperature
-      data:
-        entity_id: group.cooling_thermostats
-        temperature: !secret cool_home
-
-# Return heat/cool when vacation mode turned off during day hours
+  - service: climate.set_temperature
+    data:
+      entity_id: group.downstairs_thermostats
+      temperature: 60
+  - service: climate.set_temperature
+    data:
+      entity_id: group.upstairs_thermostats
+      temperature: 64
+  - service: climate.set_temperature
+    data:
+      entity_id: group.cooling_thermostats
+      temperature: 68
 - id: climate_vacation_switch_off_day
   alias: Climate Vacation Switch Off Day
   trigger:
-    - platform: state
-      entity_id: input_boolean.vacation_mode
-      to: 'off'
+  - platform: state
+    entity_id: input_boolean.vacation_mode
+    to: 'off'
   condition:
     condition: and
     conditions:
-      - condition: time
-        after: '06:00'
-      - condition: time
-        before: '21:59'
+    - condition: time
+      after: 06:00
+    - condition: time
+      before: '21:59'
   action:
-    - service: climate.set_temperature
-      data:
-        entity_id: group.downstairs_thermostats
-        temperature: !secret heat_home_morning_downstairs
-    - service: climate.set_temperature
-      data:
-        entity_id: group.upstairs_thermostats
-        temperature: !secret heat_home_morning_upstairs
-    - service: climate.set_temperature
-      data:
-        entity_id: group.cooling_thermostats
-        temperature: !secret cool_home
-
-# Set lights to regular mode if switch turned off at sunset
+  - service: climate.set_temperature
+    data:
+      entity_id: group.downstairs_thermostats
+      temperature: 68
+  - service: climate.set_temperature
+    data:
+      entity_id: group.upstairs_thermostats
+      temperature: 64
+  - service: climate.set_temperature
+    data:
+      entity_id: group.cooling_thermostats
+      temperature: 68
 - id: light_vacation_switch_off_night
   alias: Light Vacation Switch Off Night
   trigger:
-    - platform: state
-      entity_id: input_boolean.vacation_mode
-      to: 'off'
+  - platform: state
+    entity_id: input_boolean.vacation_mode
+    to: 'off'
   condition:
     condition: and
     conditions:
-      - condition: state
-        entity_id: input_boolean.vacation_mode
-        state: 'off'
-      - condition: sun
-        after: sunset
-        after_offset: "-00:30:00"
-      - condition: time
-        before: '23:59'
+    - condition: state
+      entity_id: input_boolean.vacation_mode
+      state: 'off'
+    - condition: sun
+      after: sunset
+      after_offset: -00:30:00
+    - condition: time
+      before: '23:59'
   action:
     service: scene.turn_on
     data:
-      entity_id: 
-        - scene.family_room_lights__normal
-        - scene.living_room_lights__normal
-        - scene.kitchen_lights__normal
-
-# Turn everything off at midnight
+      entity_id:
+      - scene.family_room_lights__normal
+      - scene.living_room_lights__normal
+      - scene.kitchen_lights__normal
 - id: light_midnight_off
   alias: Light Midnight Off
   trigger:
     platform: time
-    at: "00:00:00"
+    at: 00:00:00
   action:
     service: homeassistant.turn_off
     entity_id:
@@ -214,14 +193,12 @@
     - group.family_room_lights
     - group.kitchen_lights
     - group.outside_lights
-
-# Transition on lights around sunrise when in guest mode
 - id: basement_guest_sunrise_lights
   alias: Basement Guest Sunrise Lights
   trigger:
     platform: sun
     event: sunrise
-    offset: "-00:15:00"
+    offset: -00:15:00
   condition:
     condition: state
     entity_id: input_boolean.guest_mode
@@ -232,14 +209,12 @@
       entity_id: light.basement_couch
       transition: 1800
       brightness: 254
-
-# Turn on subset of lights when in vacation mode
 - id: light_sunset_vacation
   alias: Light Sunset Vacation
   trigger:
     platform: sun
     event: sunset
-    offset: "-00:30:00"
+    offset: -00:30:00
   condition:
     condition: state
     entity_id: input_boolean.vacation_mode
@@ -247,17 +222,15 @@
   action:
     service: scene.turn_on
     data:
-      entity_id: 
-        - scene.family_room_lights__away
-        - scene.living_room_lights__away
-
-# Transition on lights when not in vacation mode
+      entity_id:
+      - scene.family_room_lights__away
+      - scene.living_room_lights__away
 - id: light_sunset_home
   alias: Light Sunset Home
   trigger:
     platform: sun
     event: sunset
-    offset: "-00:30:00"
+    offset: -00:30:00
   condition:
     condition: state
     entity_id: input_boolean.vacation_mode
@@ -265,12 +238,10 @@
   action:
     service: scene.turn_on
     data:
-      entity_id: 
-        - scene.family_room_lights__normal
-        - scene.living_room_lights__normal
-        - scene.kitchen_lights__normal
-
-# Turn on outside lights regardless of who is home
+      entity_id:
+      - scene.family_room_lights__normal
+      - scene.living_room_lights__normal
+      - scene.kitchen_lights__normal
 - id: light_sunset_outside
   alias: Light Sunset Outside
   trigger:
@@ -280,89 +251,81 @@
     service: switch.turn_on
     data:
       entity_id: group.outside_lights
-
-# Set lights to vacation mode if switch turned on at sunset
 - id: light_vacation_switch_on_night
   alias: Light Vacation Switch On Night
   trigger:
-    - platform: state
-      entity_id: input_boolean.vacation_mode
-      to: 'on'
+  - platform: state
+    entity_id: input_boolean.vacation_mode
+    to: 'on'
   condition:
     condition: and
     conditions:
-      - condition: state
-        entity_id: input_boolean.vacation_mode
-        state: 'on'
-      - condition: sun
-        after: sunset
-        after_offset: "-00:30:00"
-      - condition: time
-        before: '23:59'
+    - condition: state
+      entity_id: input_boolean.vacation_mode
+      state: 'on'
+    - condition: sun
+      after: sunset
+      after_offset: -00:30:00
+    - condition: time
+      before: '23:59'
   action:
-    - service: homeassistant.turn_off
+  - service: homeassistant.turn_off
+    entity_id:
+    - group.living_room_lights
+    - group.family_room_lights
+  - service: scene.turn_on
+    data:
       entity_id:
-        - group.living_room_lights
-        - group.family_room_lights
-    - service: scene.turn_on
-      data:
-        entity_id: 
-          - scene.family_room_lights__away
-          - scene.living_room_lights__away
-
+      - scene.family_room_lights__away
+      - scene.living_room_lights__away
 - id: motion_basement_still_to_motion
   alias: Motion Basement - Still-to-Motion
   trigger:
-    - platform: state
-      entity_id: sensor.basement_motion
-      to: 'Motion'
-      for:
-        minutes: 8
+  - platform: state
+    entity_id: sensor.basement_motion
+    to: Motion
+    for:
+      minutes: 8
   action:
     service: homeassistant.turn_on
     data:
       entity_id: input_boolean.motion_basement
-
 - id: motion_basement_motion_to_still
   alias: Motion Basement - Motion-to-Still
   trigger:
-    - platform: state
-      entity_id: sensor.basement_motion
-      to: 'Still'
-      for:
-        minutes: 60
+  - platform: state
+    entity_id: sensor.basement_motion
+    to: Still
+    for:
+      minutes: 60
   action:
     service: homeassistant.turn_off
     data:
       entity_id: input_boolean.motion_basement
-
 - id: motion_downstairs_still_to_motion
   alias: Motion Downstairs - Still-to-Motion
   trigger:
-    - platform: state
-      entity_id: sensor.downstairs_motion
-      to: 'Motion'
-      for:
-        minutes: 8
+  - platform: state
+    entity_id: sensor.downstairs_motion
+    to: Motion
+    for:
+      minutes: 8
   action:
     service: homeassistant.turn_on
     data:
       entity_id: input_boolean.motion_downstairs
-
 - id: motion_downstairs_motion_to_still
   alias: Motion Downstairs - Motion-to-Still
   trigger:
-    - platform: state
-      entity_id: sensor.downstairs_motion
-      to: 'Still'
-      for:
-        minutes: 60
+  - platform: state
+    entity_id: sensor.downstairs_motion
+    to: Still
+    for:
+      minutes: 60
   action:
     service: homeassistant.turn_off
     data:
       entity_id: input_boolean.motion_downstairs
-
-# Send notification when hot water tank sensor changes state
 - id: basement_hot_water_tank_change
   alias: Basement Hot Water Tank Change
   trigger:
@@ -372,9 +335,8 @@
     service: notify.html5
     data:
       title: Water System Notification
-      message: Hot water tank leak {% if is_state("binary_sensor.basement_hot_water_liquid_detected", "off") %}not {% endif %}detected.
-
-# Send notification when sump pump sensor changes state
+      message: Hot water tank leak {% if is_state("binary_sensor.basement_hot_water_liquid_detected",
+        "off") %}not {% endif %}detected.
 - id: basement_sump_pump_change
   alias: Basement Sump Pump Change
   trigger:
@@ -384,9 +346,8 @@
     service: notify.html5
     data:
       title: Water System Notification
-      message: Sump pump leak {% if is_state("binary_sensor.basement_sump_liquid_detected", "off") %}not {% endif %}detected.
-
-# Send notification when water tank sensor changes state
+      message: Sump pump leak {% if is_state("binary_sensor.basement_sump_liquid_detected",
+        "off") %}not {% endif %}detected.
 - id: basement_water_tank_change
   alias: Basement Water Tank Change
   trigger:
@@ -396,32 +357,45 @@
     service: notify.html5
     data:
       title: Water System Notification
-      message: Water tank leak {% if is_state("binary_sensor.basement_water_liquid_detected", "off") %}not {% endif %}detected.
-
-# Notify on fail2ban sensor
+      message: Water tank leak {% if is_state("binary_sensor.basement_water_liquid_detected",
+        "off") %}not {% endif %}detected.
 - id: notify_on_failed_login
   alias: Notify on Failed Login
   trigger:
-    - platform: state
-      entity_id: sensor.fail2ban_nginxhttpauth
-    - platform: state
-      entity_id: sensor.fail2ban_organizrauth
-    - platform: state
-      entity_id: sensor.fail2ban_hassiptables
+  - platform: state
+    entity_id: sensor.fail2ban_nginxhttpauth
+  - platform: state
+    entity_id: sensor.fail2ban_organizrauth
+  - platform: state
+    entity_id: sensor.fail2ban_hassiptables
   condition:
     condition: or
     conditions:
-      - condition: template
-        value_template: '{{ states.sensor.fail2ban_nginxhttpauth.state != "None" }}'
-      - condition: template
-        value_template: '{{ states.sensor.fail2ban_organizrauth.state != "None" }}'
-      - condition: template
-        value_template: '{{ states.sensor.fail2ban_hassiptables.state != "None" }}'
+    - condition: template
+      value_template: '{{ states.sensor.fail2ban_nginxhttpauth.state != "None" }}'
+    - condition: template
+      value_template: '{{ states.sensor.fail2ban_organizrauth.state != "None" }}'
+    - condition: template
+      value_template: '{{ states.sensor.fail2ban_hassiptables.state != "None" }}'
   action:
-      - service: notify.html5
-        data_template:
-          message: >
-            Failed Login! {{ now().strftime("%h %d, %Y at %H:%M:%S") }}
-            {% if states.sensor.fail2ban_hassiptables.state  != "None" %}HASS Attempt(s) from {{states.sensor.fail2ban_hassiptables.state}}{% endif %}
-            {% if states.sensor.fail2ban_nginxhttpauth.state != "None" %}NGINX Attempt(s) from {{states.sensor.fail2ban_nginxhttpauth.state}}{% endif %}
-            {% if states.sensor.fail2ban_organizrauth.state  != "None" %}Organizr Attempt(s) from {{states.sensor.fail2ban_organizrauth.state}}{% endif %}
+  - service: notify.html5
+    data_template:
+      message: 'Failed Login! {{ now().strftime("%h %d, %Y at %H:%M:%S") }} {% if
+        states.sensor.fail2ban_hassiptables.state  != "None" %}HASS Attempt(s) from
+        {{states.sensor.fail2ban_hassiptables.state}}{% endif %} {% if states.sensor.fail2ban_nginxhttpauth.state
+        != "None" %}NGINX Attempt(s) from {{states.sensor.fail2ban_nginxhttpauth.state}}{%
+        endif %} {% if states.sensor.fail2ban_organizrauth.state  != "None" %}Organizr
+        Attempt(s) from {{states.sensor.fail2ban_organizrauth.state}}{% endif %}
+
+        '
+- action:
+  - data:
+      message: Hass reboot complete
+      title: Hass Reboot Complete
+    service: notify.html5
+  alias: Hass Boot
+  condition: []
+  id: '1521657995583'
+  trigger:
+  - event: start
+    platform: homeassistant
