@@ -58,6 +58,7 @@ Lights Detail:
     - group.kitchen_lights
     - group.outside_lights
     - group.basement_lights
+    - group.bedroom_lights
     - group.smart_switches
 
 Automation Detail:
