@@ -10,7 +10,7 @@ homeassistant:
 #usps: !include include/usps.yaml
 #wake_on_lan:
 alarm_control_panel: !include include/alarm_control_panel.yaml
-arlo: !include include/arlo.yaml
+#arlo: !include include/arlo.yaml
 automation: !include automations.yaml
 camera: !include include/camera.yaml
 config:
