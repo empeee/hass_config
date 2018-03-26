@@ -1,348 +1,472 @@
 sensor.family_room_temperature:
+  name:
   platform: zwave
   unique_id: 2-72057594076479506
 climate.family_room_heating_1:
+  name:
   platform: zwave
   unique_id: 2-72057594076774418
 climate.family_room_cooling_1:
+  name:
   platform: zwave
   unique_id: 2-72057594076774434
 sensor.jake_bedroom_temperature:
+  name:
   platform: zwave
   unique_id: 4-72057594110033938
 climate.jake_bedroom_heating_1:
+  name:
   platform: zwave
   unique_id: 4-72057594110328850
 climate.jake_bedroom_cooling_1:
+  name:
   platform: zwave
   unique_id: 4-72057594110328866
 sensor.master_bedroom_temperature:
+  name:
   platform: zwave
   unique_id: 5-72057594126811154
 sensor.master_bedroom_relative_humidity:
+  name:
   platform: zwave
   unique_id: 5-72057594126811218
 climate.master_bedroom_heating_1:
+  name:
   platform: zwave
   unique_id: 5-72057594127106066
 climate.master_bedroom_cooling_1:
+  name:
   platform: zwave
   unique_id: 5-72057594127106082
 light.family_room_ceiling_level:
+  name:
   platform: zwave
   unique_id: 6-72057594143408129
 switch.outside_front_porch_switch:
+  name:
   platform: zwave
   unique_id: 7-72057594160168960
 switch.outside_garage_switch:
+  name:
   platform: zwave
   unique_id: 8-72057594176946176
 sensor.energy_meter_energy:
+  name:
   platform: zwave
   unique_id: 9-72057594193936386
 sensor.energy_meter_energy_2:
+  name:
   platform: zwave
   unique_id: 9-144115188231864322
 sensor.energy_meter_energy_3:
+  name:
   platform: zwave
   unique_id: 9-216172782269792258
 sensor.energy_meter_previous_reading:
+  name:
   platform: zwave
   unique_id: 9-72057594193936402
 sensor.energy_meter_power:
+  name:
   platform: zwave
   unique_id: 9-72057594193936514
 sensor.energy_meter_voltage:
+  name:
   platform: zwave
   unique_id: 9-72057594193936642
 sensor.energy_meter_previous_reading_2:
+  name:
   platform: zwave
   unique_id: 9-72057594193936658
 sensor.energy_meter_current:
+  name:
   platform: zwave
   unique_id: 9-72057594193936706
 sensor.energy_meter_previous_reading_3:
+  name:
   platform: zwave
   unique_id: 9-144115188231864338
 sensor.energy_meter_power_2:
+  name:
   platform: zwave
   unique_id: 9-144115188231864450
 sensor.energy_meter_voltage_2:
+  name:
   platform: zwave
   unique_id: 9-144115188231864578
 sensor.energy_meter_current_2:
+  name:
   platform: zwave
   unique_id: 9-144115188231864642
 sensor.energy_meter_previous_reading_4:
+  name:
   platform: zwave
   unique_id: 9-216172782269792274
 sensor.energy_meter_power_3:
+  name:
   platform: zwave
   unique_id: 9-216172782269792386
 sensor.energy_meter_voltage_3:
+  name:
   platform: zwave
   unique_id: 9-216172782269792514
 sensor.energy_meter_current_3:
+  name:
   platform: zwave
   unique_id: 9-216172782269792578
 switch.ps_general1_switch:
+  name:
   platform: zwave
   unique_id: 10-72057594210500608
 sensor.ps_general1_energy:
+  name:
   platform: zwave
   unique_id: 10-72057594210713602
 sensor.ps_general1_previous_reading:
+  name:
   platform: zwave
   unique_id: 10-72057594210713618
 sensor.ps_general1_power:
+  name:
   platform: zwave
   unique_id: 10-72057594210713730
 sensor.ps_general1_previous_reading_2:
+  name:
   platform: zwave
   unique_id: 10-72057594210713746
 sensor.ps_general1_voltage:
+  name:
   platform: zwave
   unique_id: 10-72057594210713858
 sensor.ps_general1_previous_reading_3:
+  name:
   platform: zwave
   unique_id: 10-72057594210713874
 sensor.ps_general1_current:
+  name:
   platform: zwave
   unique_id: 10-72057594210713922
 sensor.ps_general1_previous_reading_4:
+  name:
   platform: zwave
   unique_id: 10-72057594210713938
 binary_sensor.ms_living_room_sensor:
+  name:
   platform: zwave
   unique_id: 11-72057594227458048
 sensor.ms_living_room_temperature:
+  name:
   platform: zwave
   unique_id: 11-72057594227474450
 sensor.ms_living_room_luminance:
+  name:
   platform: zwave
   unique_id: 11-72057594227474482
 sensor.ms_living_room_relative_humidity:
+  name:
   platform: zwave
   unique_id: 11-72057594227474514
 sensor.ms_living_room_ultraviolet:
+  name:
   platform: zwave
   unique_id: 11-72057594227474866
 sensor.ms_living_room_alarm_type:
+  name:
   platform: zwave
   unique_id: 11-72057594228523009
 sensor.ms_living_room_alarm_level:
+  name:
   platform: zwave
   unique_id: 11-72057594228523025
 sensor.ms_living_room_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 11-72057594228523041
 sensor.ms_living_room_burglar:
+  name:
   platform: zwave
   unique_id: 11-72057594228523169
 binary_sensor.ms_family_room_sensor:
+  name:
   platform: zwave
   unique_id: 12-72057594244235264
 sensor.ms_family_room_temperature:
+  name:
   platform: zwave
   unique_id: 12-72057594244251666
 sensor.ms_family_room_general:
+  name:
   platform: zwave
   unique_id: 12-72057594244251682
 sensor.ms_family_room_luminance:
+  name:
   platform: zwave
   unique_id: 12-72057594244251698
 sensor.ms_family_room_power:
+  name:
   platform: zwave
   unique_id: 12-72057594244251714
 sensor.ms_family_room_relative_humidity:
+  name:
   platform: zwave
   unique_id: 12-72057594244251730
 sensor.ms_family_room_ultraviolet:
+  name:
   platform: zwave
   unique_id: 12-72057594244252082
 sensor.ms_family_room_alarm_type:
+  name:
   platform: zwave
   unique_id: 12-72057594245300225
 sensor.ms_family_room_alarm_level:
+  name:
   platform: zwave
   unique_id: 12-72057594245300241
 sensor.ms_family_room_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 12-72057594245300257
 sensor.ms_family_room_burglar:
+  name:
   platform: zwave
   unique_id: 12-72057594245300385
 binary_sensor.ms_basement_sensor:
+  name:
   platform: zwave
   unique_id: 15-72057594294566912
 sensor.ms_basement_temperature:
+  name:
   platform: zwave
   unique_id: 15-72057594294583314
 sensor.ms_basement_luminance:
+  name:
   platform: zwave
   unique_id: 15-72057594294583346
 sensor.ms_basement_relative_humidity:
+  name:
   platform: zwave
   unique_id: 15-72057594294583378
 sensor.ms_basement_ultraviolet:
+  name:
   platform: zwave
   unique_id: 15-72057594294583730
 sensor.ms_basement_alarm_type:
+  name:
   platform: zwave
   unique_id: 15-72057594295631873
 sensor.ms_basement_alarm_level:
+  name:
   platform: zwave
   unique_id: 15-72057594295631889
 sensor.ms_basement_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 15-72057594295631905
 sensor.ms_basement_burglar:
+  name:
   platform: zwave
   unique_id: 15-72057594295632033
 binary_sensor.ms_kitchen_sensor:
+  name:
   platform: zwave
   unique_id: 16-72057594311344128
 sensor.ms_kitchen_temperature:
+  name:
   platform: zwave
   unique_id: 16-72057594311360530
 sensor.ms_kitchen_luminance:
+  name:
   platform: zwave
   unique_id: 16-72057594311360562
 sensor.ms_kitchen_relative_humidity:
+  name:
   platform: zwave
   unique_id: 16-72057594311360594
 sensor.ms_kitchen_ultraviolet:
+  name:
   platform: zwave
   unique_id: 16-72057594311360946
 sensor.ms_kitchen_alarm_type:
+  name:
   platform: zwave
   unique_id: 16-72057594312409089
 sensor.ms_kitchen_alarm_level:
+  name:
   platform: zwave
   unique_id: 16-72057594312409105
 sensor.ms_kitchen_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 16-72057594312409121
 sensor.ms_kitchen_burglar:
+  name:
   platform: zwave
   unique_id: 16-72057594312409249
 sensor.living_room_temperature:
+  name:
   platform: zwave
   unique_id: 17-72057594328137746
 climate.living_room_heating_1:
+  name:
   platform: zwave
   unique_id: 17-72057594328432658
 climate.living_room_cooling_1:
+  name:
   platform: zwave
   unique_id: 17-72057594328432674
 sensor.upstairs_hall_temperature:
+  name:
   platform: zwave
   unique_id: 18-72057594344914962
 sensor.upstairs_hall_relative_humidity:
+  name:
   platform: zwave
   unique_id: 18-72057594344915026
 climate.upstairs_hall_heating_1:
+  name:
   platform: zwave
   unique_id: 18-72057594345209874
 climate.upstairs_hall_cooling_1:
+  name:
   platform: zwave
   unique_id: 18-72057594345209890
 light.living_room_coffee_lamp:
+  name:
   platform: hue
   unique_id: 00:17:88:01:10:29:05:ef-0b
 light.living_room_tall_lamp:
+  name:
   platform: hue
   unique_id: 00:17:88:01:10:25:c3:0d-0b
 light.family_room_piano:
+  name:
   platform: hue
   unique_id: 00:17:88:01:02:04:02:20-0b
 light.family_room_couch:
+  name:
   platform: hue
   unique_id: 00:17:88:01:02:04:00:d5-0b
 light.family_room_tv_light:
+  name:
   platform: hue
   unique_id: 00:17:88:01:01:1b:48:94-0b
 light.kitchen_1:
+  name:
   platform: hue
   unique_id: 00:17:88:01:02:21:76:aa-0b
 light.kitchen_4:
+  name:
   platform: hue
   unique_id: 00:17:88:01:02:21:77:bf-0b
 light.kitchen_5:
+  name:
   platform: hue
   unique_id: 00:17:88:01:02:21:9c:c5-0b
 light.kitchen_3:
+  name:
   platform: hue
   unique_id: 00:17:88:01:02:21:75:7e-0b
 light.kitchen_2:
+  name:
   platform: hue
   unique_id: 00:17:88:01:02:21:78:f9-0b
 light.basement_guest:
+  name:
   platform: hue
   unique_id: 00:17:88:01:02:3f:d3:e5-0b
 light.basement_couch:
+  name:
   platform: hue
   unique_id: 00:17:88:01:02:21:d5:98-0b
 light.basement_toys:
+  name:
   platform: hue
   unique_id: 00:17:88:01:02:39:04:9a-0b
 light.living_room_lamp:
+  name:
   platform: hue
   unique_id: 00:17:88:01:02:cb:fa:64-0b
 media_player.shield_family_room:
+  name:
   platform: plex
   unique_id: f683dac22716a20a-com-plexapp-android
 media_player.pixel_2:
+  name:
   platform: plex
   unique_id: c9ffdbe470ea5604-com-plexapp-android
 media_player.nexus_player:
+  name:
   platform: plex
   unique_id: baf00957d412b7c2-com-plexapp-android
 media_player.jakes_ipad:
+  name:
   platform: plex
   unique_id: F7FD4DFD-4E4E-48DA-9EE3-6D7B6DE28875
 media_player.shield_basement:
+  name:
   platform: plex
   unique_id: 8c632dac9724e715-com-plexapp-android
 media_player.plex_web_chrome:
+  name:
   platform: plex
   unique_id: pyp0bz47rtlrlfddoc44niqx
 media_player.laundry_room_tv:
+  name:
   platform: cast
   unique_id: 6ea49444-3168-fa25-d04b-bd86be2ecfd8
 media_player.basement_tv:
+  name:
   platform: cast
   unique_id: 8da05e4a-c6aa-f33d-dc4b-eb0fb14473d8
 media_player.kitchen_home:
+  name:
   platform: cast
   unique_id: e70431e6-17e0-9a03-fd97-9c4238a4fec4
 media_player.family_room_tv:
+  name:
   platform: cast
   unique_id: e2f5cec7-ce01-7683-0eff-6973cc7e6475
 media_player.family_room_home:
+  name:
   platform: cast
   unique_id: b655f125-a180-46a1-233d-e4a39ed47cc1
 media_player.xbr65x850d:
+  name:
   platform: cast
   unique_id: 659f231f-b0d0-4261-ebcd-7f24f2b85c0c
 media_player.both_rooms:
+  name:
   platform: cast
   unique_id: c8745693-5060-4050-b464-53900d177661
 media_player.bedroom_tv:
+  name:
   platform: cast
   unique_id: e55a8249-8ce6-cbd8-def6-84533013424e
 media_player.plex_web_chrome_2:
+  name:
   platform: plex
   unique_id: ct0wdgt1jw4eiunt33hiugou
 media_player.bedroom_speaker:
+  name:
   platform: cast
   unique_id: e28bf8fc-d794-274e-cfd4-1b3246968f49
 media_player.basement_speaker:
+  name:
   platform: cast
   unique_id: ab75f7e1-3dcc-d78c-1520-151689a83e4b
 media_player.chrome:
+  name:
   platform: plex
   unique_id: 23x5550qi9ngd4d2i72kz72d
 media_player.home_group:
+  name:
   platform: cast
   unique_id: 10756732-154e-4e88-84ed-21ae5fb2fffb
+light.bedroom_bed:
+  name: Bedroom Bed
+  platform: hue
+  unique_id: 00:17:88:01:02:a8:79:2c-0b
+light.bedroom_chair:
+  name: Bedroom Chair
+  platform: hue
+  unique_id: 00:17:88:01:02:a8:8e:47-0b
