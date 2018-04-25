@@ -470,3 +470,11 @@ light.bedroom_chair:
   name: Bedroom Chair
   platform: hue
   unique_id: 00:17:88:01:02:a8:8e:47-0b
+media_player.chrome_2:
+  name:
+  platform: plex
+  unique_id: ir6b0kh1geokiqadp78fb779
+media_player.averys_ipad:
+  name:
+  platform: plex
+  unique_id: 01AC03E7-A178-4D9F-9177-3F27FB0511C3
