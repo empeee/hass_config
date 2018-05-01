@@ -17,6 +17,10 @@ entity_config:
     expose: true
   input_boolean.vacation_mode:
     expose: true
+  input_boolean.heat_automation:
+    expose: true
+  input_boolean.cool_automation:
+    expose: true
   light.basement_couch:
     expose: true
   light.basement_guest:
