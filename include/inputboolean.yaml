@@ -30,8 +30,8 @@ motion_basement:
 
 heat_automation:
   name: Heating
-  icon: mdi:nest-thermostat
+  icon: mdi:thermostat
 
 cool_automation:
   name: Cooling
-  icon: mdi:nest-thermostat
+  icon: mdi:thermostat

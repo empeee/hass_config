@@ -26,7 +26,7 @@ Lights:
 
 Climate:
   view: yes
-  icon: mdi:nest-thermostat
+  icon: mdi:thermostat
   entities:
     - group.downstairs_thermostats
     - group.downstairs_temperature_sensors
