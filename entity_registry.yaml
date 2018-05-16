@@ -478,3 +478,131 @@ media_player.averys_ipad:
   name:
   platform: plex
   unique_id: 01AC03E7-A178-4D9F-9177-3F27FB0511C3
+media_player.chrome_3:
+  name:
+  platform: plex
+  unique_id: qdpka0pzx0ngeljbckofaalk
+sensor.family_room_relative_humidity:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076479570
+media_player.unnamed_device:
+  name:
+  platform: plex
+  unique_id: 'null'
+media_player.unpude_win_vm:
+  name:
+  platform: plex
+  unique_id: c7ad7512-48cc-4705-9900-412092d3d265
+sensor.pws_wind_dir:
+  name:
+  platform: wunderground
+  unique_id: knyhoneo5,wind_dir
+sensor.pws_station_id:
+  name:
+  platform: wunderground
+  unique_id: knyhoneo5,station_id
+sensor.pws_weather:
+  name:
+  platform: wunderground
+  unique_id: knyhoneo5,weather
+sensor.pws_precip_today_in:
+  name:
+  platform: wunderground
+  unique_id: knyhoneo5,precip_today_in
+sensor.pws_uv:
+  name:
+  platform: wunderground
+  unique_id: knyhoneo5,UV
+sensor.pws_temp_f:
+  name:
+  platform: wunderground
+  unique_id: knyhoneo5,temp_f
+sensor.pws_feelslike_f:
+  name:
+  platform: wunderground
+  unique_id: knyhoneo5,feelslike_f
+sensor.pws_relative_humidity:
+  name:
+  platform: wunderground
+  unique_id: knyhoneo5,relative_humidity
+sensor.pws_dewpoint_f:
+  name:
+  platform: wunderground
+  unique_id: knyhoneo5,dewpoint_f
+sensor.pws_alerts:
+  name:
+  platform: wunderground
+  unique_id: knyhoneo5,alerts
+sensor.pws_weather_1d:
+  name:
+  platform: wunderground
+  unique_id: knyhoneo5,weather_1d
+sensor.pws_wind_mph:
+  name:
+  platform: wunderground
+  unique_id: knyhoneo5,wind_mph
+sensor.pws_pressure_in:
+  name:
+  platform: wunderground
+  unique_id: knyhoneo5,pressure_in
+zwave.aeotec_zw090_zstick_gen5:
+  name:
+  platform: zwave
+  unique_id: node-1
+zwave.family_room:
+  name:
+  platform: zwave
+  unique_id: node-2
+zwave.jake_bedroom:
+  name:
+  platform: zwave
+  unique_id: node-4
+zwave.master_bedroom:
+  name:
+  platform: zwave
+  unique_id: node-5
+zwave.family_room_ceiling:
+  name:
+  platform: zwave
+  unique_id: node-6
+zwave.outside_front_porch:
+  name:
+  platform: zwave
+  unique_id: node-7
+zwave.outside_garage:
+  name:
+  platform: zwave
+  unique_id: node-8
+zwave.energy_meter:
+  name:
+  platform: zwave
+  unique_id: node-9
+zwave.ps_general1:
+  name:
+  platform: zwave
+  unique_id: node-10
+zwave.ms_living_room:
+  name:
+  platform: zwave
+  unique_id: node-11
+zwave.ms_family_room:
+  name:
+  platform: zwave
+  unique_id: node-12
+zwave.ms_basement:
+  name:
+  platform: zwave
+  unique_id: node-15
+zwave.ms_kitchen:
+  name:
+  platform: zwave
+  unique_id: node-16
+zwave.living_room:
+  name:
+  platform: zwave
+  unique_id: node-17
+zwave.upstairs_hall:
+  name:
+  platform: zwave
+  unique_id: node-18
