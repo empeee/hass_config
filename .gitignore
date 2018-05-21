@@ -5,6 +5,7 @@
 /*.txt
 /*.xml
 /*.pickle
+/*.db
 /.HA_VERSION
 /.uuid
 /deps/
