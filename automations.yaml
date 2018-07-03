@@ -70,41 +70,49 @@
       entity_id: group.cooling_thermostats
       temperature: 80
 - id: climate_heat_home_night
-  alias: Climate Heat Home Night
+  alias: Climate Home Night
   trigger:
+  - at: '22:00:00'
     platform: time
-    at: '22:00:00'
   condition:
-    condition: state
+  - condition: state
     entity_id: input_boolean.vacation_mode
     state: 'off'
   action:
-  - service: climate.set_temperature
-    data:
+  - data:
       entity_id: group.downstairs_thermostats
       temperature: 60
-  - service: climate.set_temperature
-    data:
+    service: climate.set_temperature
+  - data:
       entity_id: group.upstairs_thermostats
       temperature: 64
+    service: climate.set_temperature
+  - data:
+      entity_id: group.cooling_thermostats
+      temperature: 68
+    service: climate.set_temperature
 - id: climate_heat_home_day
-  alias: Climate Heat Home Day
+  alias: Climate Home Day
   trigger:
+  - at: 06:00:00
     platform: time
-    at: 06:00:00
   condition:
-    condition: state
+  - condition: state
     entity_id: input_boolean.vacation_mode
     state: 'off'
   action:
-  - service: climate.set_temperature
-    data:
+  - data:
       entity_id: group.downstairs_thermostats
       temperature: 68
-  - service: climate.set_temperature
-    data:
+    service: climate.set_temperature
+  - data:
       entity_id: group.upstairs_thermostats
       temperature: 64
+    service: climate.set_temperature
+  - data:
+      entity_id: group.cooling_thermostats
+      temperature: 72
+    service: climate.set_temperature
 - id: climate_vacation_switch_off_night
   alias: Climate Vacation Switch Off Night
   trigger:
@@ -156,7 +164,7 @@
   - service: climate.set_temperature
     data:
       entity_id: group.cooling_thermostats
-      temperature: 68
+      temperature: 72
 - id: light_vacation_switch_off_night
   alias: Light Vacation Switch Off Night
   trigger:

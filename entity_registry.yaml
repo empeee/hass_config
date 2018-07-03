@@ -606,3 +606,23 @@ zwave.upstairs_hall:
   name:
   platform: zwave
   unique_id: node-18
+sensor.family_room_co2_level:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076479762
+sensor.jake_bedroom_luminance:
+  name:
+  platform: zwave
+  unique_id: 4-72057594110033970
+media_player.oneplus_a5000:
+  name:
+  platform: plex
+  unique_id: 4c2532f8f0d58a49-com-plexapp-android
+sensor.family_room_luminance:
+  name:
+  platform: zwave
+  unique_id: 2-72057594076479538
+media_player.pixel_2_2:
+  name:
+  platform: plex
+  unique_id: b3b72c0727e3c9d8-com-plexapp-android
