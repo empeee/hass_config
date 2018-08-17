@@ -5,4 +5,4 @@
 #- platform: usps
 #  scan_interval: 5
 
-#- platform: arlo
+- platform: arlo
