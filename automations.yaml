@@ -111,7 +111,7 @@
     service: climate.set_temperature
   - data:
       entity_id: group.cooling_thermostats
-      temperature: 72
+      temperature: 70
     service: climate.set_temperature
 - id: climate_vacation_switch_off_night
   alias: Climate Vacation Switch Off Night
@@ -164,7 +164,7 @@
   - service: climate.set_temperature
     data:
       entity_id: group.cooling_thermostats
-      temperature: 72
+      temperature: 70
 - id: light_vacation_switch_off_night
   alias: Light Vacation Switch Off Night
   trigger:
