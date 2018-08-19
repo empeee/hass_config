@@ -1,2 +1,4 @@
 api_password: !secret http_password
 use_x_forwarded_for: True
+trusted_proxies:
+  - 172.17.0.0/22
