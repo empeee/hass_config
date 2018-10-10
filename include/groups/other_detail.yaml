@@ -46,6 +46,10 @@ Fail2Ban Sensors:
     - sensor.fail2ban_nginxbotsearch
     - sensor.fail2ban_organizrauth
     - sensor.fail2ban_hassiptables
+    - sensor.fail2ban_f2bloop2
+    - sensor.fail2ban_f2bloop3
+    - sensor.fail2ban_f2bloop4
+    - sensor.fail2ban_f2bloop5
 
 Energy Monitor:
   entities:

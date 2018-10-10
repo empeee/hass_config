@@ -1,6 +1,7 @@
 - id: climate_cool_switch_on
   alias: Climate Cool Switch On
   trigger:
+
   - platform: state
     entity_id: input_boolean.cool_automation
     to: 'on'
@@ -368,16 +369,20 @@
       message: Water tank leak {% if is_state("binary_sensor.basement_water_liquid_detected",
         "off") %}not {% endif %}detected.
 - id: notify_on_failed_login
-  alias: Notify on Failed Login
+  alias: Notify Failed Login
   trigger:
-  - platform: state
-    entity_id: sensor.fail2ban_nginxhttpauth
-  - platform: state
-    entity_id: sensor.fail2ban_organizrauth
-  - platform: state
-    entity_id: sensor.fail2ban_hassiptables
+  - entity_id: sensor.fail2ban_nginxhttpauth
+    platform: state
+  - entity_id: sensor.fail2ban_organizrauth
+    platform: state
+  - entity_id: sensor.fail2ban_hassiptables
+    platform: state
+  - entity_id: sensor.fail2ban_nginxbadbots
+    platform: state
+  - entity_id: sensor.fail2ban_nginxbotsearch
+    platform: state
   condition:
-    condition: or
+  - condition: or
     conditions:
     - condition: template
       value_template: '{{ states.sensor.fail2ban_nginxhttpauth.state != "None" }}'
@@ -385,8 +390,14 @@
       value_template: '{{ states.sensor.fail2ban_organizrauth.state != "None" }}'
     - condition: template
       value_template: '{{ states.sensor.fail2ban_hassiptables.state != "None" }}'
+    - condition: template
+      value_template: '{{ states.sensor.fail2ban_nginxbadbots.state != "None" }}'
+    - condition: template
+      value_template: '{{ states.sensor.fail2ban_nginxbotsearch.state != "None" }}'
   action:
-  - service: notify.html5
+  - data:
+      message: Fail2ban failed login
+      title: Fail2ban failed login
     data_template:
       message: 'Failed Login! {{ now().strftime("%h %d, %Y at %H:%M:%S") }} {% if
         states.sensor.fail2ban_hassiptables.state  != "None" %}HASS Attempt(s) from
@@ -396,14 +407,15 @@
         Attempt(s) from {{states.sensor.fail2ban_organizrauth.state}}{% endif %}
 
         '
-- action:
+    service: notify.html5
+- id: '1521657995583'
+  alias: Notify Hass Boot
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
   - data:
       message: Hass reboot complete
       title: Hass Reboot Complete
     service: notify.html5
-  alias: Hass Boot
-  condition: []
-  id: '1521657995583'
-  trigger:
-  - event: start
-    platform: homeassistant

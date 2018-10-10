@@ -5,5 +5,9 @@
     - nginx-botsearch
     - organizr-auth
     - hass-iptables
+    - f2b-loop2
+    - f2b-loop3
+    - f2b-loop4
+    - f2b-loop5
   file_path: !secret fail2ban_log
   scan_interval: 120
