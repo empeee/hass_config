@@ -19,14 +19,16 @@ Climate Automations:
     - automation.climate_vacation_switch_on
     - automation.climate_vacation_switch_off_night
     - automation.climate_vacation_switch_off_day
-    - automation.climate_heat_home_night
-    - automation.climate_heat_home_day
+    - automation.climate_home_night
+    - automation.climate_home_day
 
 Sensor Notifications:
   entities:
     - automation.basement_water_tank_change
     - automation.basement_hot_water_tank_change
     - automation.basement_sump_pump_change
+    - automation.notify_failed_login
+    - automation.notify_hass_boot
 
 Basement Automations:
   entities:
