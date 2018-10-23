@@ -18,6 +18,9 @@
     light.basement_guest:
       state: on
       brightness: 254
+    light.basement_office:
+      state: on
+      brightness: 154
 
 - name: Basement Lights - Relax
   entities:
@@ -33,6 +36,9 @@
       brightness: 154
       kelvin: 2200
       transition: 2
+    light.basement_guest:
+      state: on
+      brightness: 154
     light.basement_guest:
       state: on
       brightness: 154

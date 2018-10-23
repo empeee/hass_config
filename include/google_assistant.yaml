@@ -27,6 +27,8 @@ entity_config:
     expose: true
   light.basement_toys:
     expose: true
+  light.basement_office:
+    expose: true
   light.bedroom_bed:
     expose: true
   light.bedroom_chair:

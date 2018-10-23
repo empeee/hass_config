@@ -1,2 +1,0 @@
-- platform: braviatv
-  host: !secret bravia_tv

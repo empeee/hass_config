@@ -1,4 +1,4 @@
 bridges:
-  - host: 192.168.86.75
+  - host: 192.168.86.127
     allow_hue_groups: false
 

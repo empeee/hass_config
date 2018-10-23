@@ -1,4 +1,0 @@
-host_ip: !secret emulated_hue_ip
-type: google_home
-listen_port: 80
-expose_by_default: false

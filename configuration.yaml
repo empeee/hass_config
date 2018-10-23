@@ -7,10 +7,7 @@ homeassistant:
   time_zone: America/New_York
   customize: !include_dir_merge_named customize
 
-#usps: !include include/usps.yaml
-#wake_on_lan:
 alarm_control_panel: !include include/alarm_control_panel.yaml
-arlo: !include include/arlo.yaml
 automation: !include automations.yaml
 camera: !include include/camera.yaml
 config:
@@ -18,7 +15,6 @@ device_tracker: !include include/device_tracker.yaml
 discovery:
   ignore:
     - songpal
-emulated_hue: !include include/emulated_hue.yaml
 frontend:
 group: !include_dir_merge_named include/groups
 history: !include include/history.yaml
@@ -27,7 +23,6 @@ influxdb: !include include/influxdb.yaml
 input_boolean: !include include/inputboolean.yaml
 logbook:
 logger: !include include/logger.yaml
-media_player: !include include/media_player.yaml
 notify: !include include/notify.yaml
 recorder: !include include/recorder.yaml
 scene: !include_dir_merge_list include/scenes

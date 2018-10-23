@@ -32,6 +32,7 @@ Basement Lights:
     - light.basement_guest
     - light.basement_toys
     - light.basement_couch
+    - light.basement_office
 
 Outside Lights:
   entities:
