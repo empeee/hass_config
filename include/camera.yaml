@@ -1,3 +1,19 @@
 - platform: generic
   still_image_url: !secret radar_url
   name: Rochester Radar
+
+- platform: local_file
+  file_path: /config/arlo-lapse/Garage.gif
+  name: Garage
+
+- platform: local_file
+  file_path: /config/arlo-lapse/Front_Door.gif
+  name: Front Door
+
+- platform: local_file
+  file_path: /config/arlo-lapse/Back_Door.gif
+  name: Back Door
+
+- platform: local_file
+  file_path: /config/arlo-lapse/Misc.gif
+  name: Misc
