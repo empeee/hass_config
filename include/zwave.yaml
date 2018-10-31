@@ -4,6 +4,9 @@ device_config:
   light.family_room_ceiling_level:
     polling_intensity: 1
     refresh_value: true
+  light.basement_office:
+    polling_intensity: 1
+    refresh_value: true
   switch.outside_front_porch_switch:
     polling_intensity: 1
     refresh_value: true
