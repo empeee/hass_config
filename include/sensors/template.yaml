@@ -3,29 +3,20 @@
     basement_temp:
       friendly_name: Basement Avg. Temperature
       unit_of_measurement: "°F"
-      value_template: >
-        {{ (states('sensor.ms_basement_temperature')|float)
-           / 1 | round(2) }}
+      value_template: >-
+        {{ (float(states.sensor.ms_basement_temperature.state)) / 1 | round(2) }}
 
     downstairs_temp:
       friendly_name: Downstairs Avg. Temperature
       unit_of_measurement: "°F"
-      value_template: >
-        {{ (states('sensor.ms_kitchen_temperature')|float
-          + states('sensor.ms_family_room_temperature')|float
-          + states('sensor.family_room_temperature')|float
-          + states('sensor.ms_living_room_temperature')|float
-          + states('sensor.living_room_temperature')|float)
-          / 5 | round(2) }}
+      value_template: >-
+        {{ (float(states.sensor.ms_kitchen_temperature.state) + float(states.sensor.ms_family_room_temperature.state) + float(states.sensor.family_room_temperature.state) + float(states.sensor.ms_living_room_temperature.state) + float(states.sensor.living_room_temperature.state)) / 5 | round(2) }}
 
     upstairs_temp:
       friendly_name: Upstairs Avg. Temperature
       unit_of_measurement: "°F"
-      value_template: >
-        {{ (states('sensor.master_bedroom_temperature')|float
-          + states('sensor.jake_bedroom_temperature')|float
-          + states('sensor.upstairs_hall_temperature')|float)
-          / 3 | round(2) }}
+      value_template: >-
+        {{ (float(states.sensor.master_bedroom_temperature.state) + float(states.sensor.jake_bedroom_temperature.state) + float(states.sensor.upstairs_hall_temperature.state)) / 3 | round(2) }}
 
     living_room_tstat_state:
       friendly_name: Living Room State
