@@ -32,9 +32,9 @@ Upstairs Temperature Sensors:
 Basement Temperature Sensors:
   entities:
     - sensor.ms_basement_temperature
-    - sensor.basement_water_temperature
-    - sensor.basement_sump_temperature
-    - sensor.basement_hot_water_temperature
+    - sensor.basement_water_temperature_2
+    - sensor.basement_sump_temperature_2
+    - sensor.basement_hot_water_temperature_2
 
 Humidity Sensors:
   entities:

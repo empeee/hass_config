@@ -3,3 +3,5 @@
     - ping
     - download
     - upload
+  #server_id: 14148
+  minute: 15

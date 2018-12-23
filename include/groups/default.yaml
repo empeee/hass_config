@@ -25,9 +25,9 @@ Presence:
 
 Water System:
   entities:
-    - binary_sensor.basement_water_liquid_detected
-    - binary_sensor.basement_sump_liquid_detected
-    - binary_sensor.basement_hot_water_liquid_detected
+    - binary_sensor.basement_water_liquid_detected_2
+    - binary_sensor.basement_sump_liquid_detected_2
+    - binary_sensor.basement_hot_water_liquid_detected_2
 
 Cameras:
   entities:
