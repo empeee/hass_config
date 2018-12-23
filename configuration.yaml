@@ -33,3 +33,8 @@ wink:
 zwave: !include include/zwave.yaml
 hue: !include include/hue.yaml
 google_assistant: !include include/google_assistant.yaml
+#panel_custom:
+#  - name: zwavegraph2
+#    sidebar_title: ZWave Graph2
+#    sidebar_icon: mdi:access-point-network
+#    url_path: zwave
