@@ -1,7 +1,6 @@
 - id: climate_cool_switch_on
   alias: Climate Cool Switch On
   trigger:
-
   - platform: state
     entity_id: input_boolean.cool_automation
     to: 'on'
@@ -82,7 +81,7 @@
   action:
   - data:
       entity_id: group.downstairs_thermostats
-      temperature: 60
+      temperature: 64
     service: climate.set_temperature
   - data:
       entity_id: group.upstairs_thermostats
@@ -117,29 +116,29 @@
 - id: climate_vacation_switch_off_night
   alias: Climate Vacation Switch Off Night
   trigger:
-  - platform: state
-    entity_id: input_boolean.vacation_mode
+  - entity_id: input_boolean.vacation_mode
+    platform: state
     to: 'off'
   condition:
-    condition: or
+  - condition: or
     conditions:
-    - condition: time
-      after: '22:00'
-    - condition: time
-      before: 05:59
+    - after: '22:00'
+      condition: time
+    - before: 05:59
+      condition: time
   action:
-  - service: climate.set_temperature
-    data:
+  - data:
       entity_id: group.downstairs_thermostats
-      temperature: 60
-  - service: climate.set_temperature
-    data:
+      temperature: 64
+    service: climate.set_temperature
+  - data:
       entity_id: group.upstairs_thermostats
       temperature: 64
-  - service: climate.set_temperature
-    data:
+    service: climate.set_temperature
+  - data:
       entity_id: group.cooling_thermostats
       temperature: 68
+    service: climate.set_temperature
 - id: climate_vacation_switch_off_day
   alias: Climate Vacation Switch Off Day
   trigger:
