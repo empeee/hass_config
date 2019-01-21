@@ -36,7 +36,7 @@ Basement Automations:
 
 Motion Automations:
   entities:
-    - automation.motion_downstairs__motiontostill
-    - automation.motion_downstairs__stilltomotion
-    - automation.motion_basement__motiontostill
-    - automation.motion_basement__stilltomotion
+    - automation.motion_downstairs_motiontostill
+    - automation.motion_downstairs_stilltomotion
+    - automation.motion_basement_motiontostill
+    - automation.motion_basement_stilltomotion

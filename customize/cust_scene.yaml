@@ -1,39 +1,39 @@
-scene.all_lights__normal:
+scene.all_lights_normal:
   icon: mdi:home
 scene.christmas_lights:
   icon: mdi:gift
   
-scene.family_room_lights__normal:
+scene.family_room_lights_normal:
   icon: mdi:home
-scene.family_room_lights__relax:
+scene.family_room_lights_relax:
   icon: mdi:book-open-page-variant
-scene.family_room_lights__full:
+scene.family_room_lights_full:
   icon: mdi:lightbulb
-scene.family_room_lights__watch_tv:
+scene.family_room_lights_watch_tv:
   icon: mdi:television
-scene.family_room_lights__watch_movie:
+scene.family_room_lights_watch_movie:
   icon: mdi:television
-scene.family_room_lights__away:
+scene.family_room_lights_away:
   icon: mdi:beach
 
-scene.living_room_lights__normal:
+scene.living_room_lights_normal:
   icon: mdi:home
-scene.living_room_lights__relax:
+scene.living_room_lights_relax:
   icon: mdi:book-open-page-variant
-scene.living_room_lights__away:
+scene.living_room_lights_away:
   icon: mdi:beach
 
-scene.kitchen_lights__normal:
+scene.kitchen_lights_normal:
   icon: mdi:home
-scene.kitchen_lights__relax:
+scene.kitchen_lights_relax:
   icon: mdi:book-open-page-variant
-scene.kitchen_lights__night:
+scene.kitchen_lights_night:
   icon: mdi:weather-night
 
-scene.basement_lights__normal:
+scene.basement_lights_normal:
   icon: mdi:home
-scene.basement_lights__relax:
+scene.basement_lights_relax:
   icon: mdi:book-open-page-variant
 
-scene.outside_lights__normal:
+scene.outside_lights_normal:
   icon: mdi:home
