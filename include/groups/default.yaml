@@ -7,7 +7,7 @@ Home Settings:
     - input_boolean.guest_mode
     - input_boolean.heat_automation
     - input_boolean.cool_automation
-    - alarm_control_panel.pude_farm
+      #    - alarm_control_panel.pude_farm
 
 Flux Settings:
   entities:
