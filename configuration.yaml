@@ -27,6 +27,7 @@ notify: !include include/notify.yaml
 recorder: !include include/recorder.yaml
 scene: !include_dir_merge_list include/scenes
 sensor: !include_dir_merge_list include/sensors
+speedtestdotnet: !include includes/speedtest.yaml
 sun:
 updater:
 wink:
