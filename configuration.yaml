@@ -7,7 +7,7 @@ homeassistant:
   time_zone: America/New_York
   customize: !include_dir_merge_named customize
 
-alarm_control_panel: !include include/alarm_control_panel.yaml
+#alarm_control_panel: !include include/alarm_control_panel.yaml
 automation: !include automations.yaml
 camera: !include include/camera.yaml
 config:
@@ -29,13 +29,9 @@ scene: !include_dir_merge_list include/scenes
 sensor: !include_dir_merge_list include/sensors
 speedtestdotnet: !include include/speedtest.yaml
 sun:
+system_health:
 updater:
 wink:
 zwave: !include include/zwave.yaml
 hue: !include include/hue.yaml
 google_assistant: !include include/google_assistant.yaml
-#panel_custom:
-#  - name: zwavegraph2
-#    sidebar_title: ZWave Graph2
-#    sidebar_icon: mdi:access-point-network
-#    url_path: zwave
