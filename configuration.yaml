@@ -23,6 +23,7 @@ influxdb: !include include/influxdb.yaml
 input_boolean: !include include/inputboolean.yaml
 logbook:
 logger: !include include/logger.yaml
+map:
 notify: !include include/notify.yaml
 recorder: !include include/recorder.yaml
 scene: !include_dir_merge_list include/scenes
