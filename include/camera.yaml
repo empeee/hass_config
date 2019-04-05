@@ -2,6 +2,8 @@
   still_image_url: !secret radar_url
   name: Rochester Radar
 
+- platform: arlo
+
 - platform: local_file
   file_path: /config/arlo-lapse/Garage.gif
   name: Garage

@@ -7,8 +7,9 @@ homeassistant:
   time_zone: America/New_York
   customize: !include_dir_merge_named customize
 
-#alarm_control_panel: !include include/alarm_control_panel.yaml
+alarm_control_panel: !include include/alarm_control_panel.yaml
 ambient_station: !include include/ambientstation.yaml
+arlo: !include include/arlo.yaml
 automation: !include automations.yaml
 camera: !include include/camera.yaml
 config:
@@ -17,9 +18,11 @@ discovery:
   ignore:
     - songpal
 frontend:
+google_assistant: !include include/google_assistant.yaml
 group: !include_dir_merge_named include/groups
 history: !include include/history.yaml
 http: !include include/httpconfig.yaml
+hue: !include include/hue.yaml
 influxdb: !include include/influxdb.yaml
 input_boolean: !include include/inputboolean.yaml
 logbook:
@@ -34,6 +37,5 @@ sun:
 system_health:
 updater:
 wink:
+weather: !include include/weather.yaml
 zwave: !include include/zwave.yaml
-hue: !include include/hue.yaml
-google_assistant: !include include/google_assistant.yaml
