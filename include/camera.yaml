@@ -6,16 +6,16 @@
 
 - platform: local_file
   file_path: /config/arlo-lapse/Garage.gif
-  name: Garage
+  name: Garage Lapse
 
 - platform: local_file
   file_path: /config/arlo-lapse/Front_Door.gif
-  name: Front Door
+  name: Front Door Lapse
 
 - platform: local_file
   file_path: /config/arlo-lapse/Back_Door.gif
-  name: Back Door
+  name: Back Door Lapse
 
 - platform: local_file
   file_path: /config/arlo-lapse/Misc.gif
-  name: Misc
+  name: Misc Lapse
