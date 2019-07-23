@@ -2,6 +2,6 @@
   platform: html5
   vapid_pub_key: !secret html5_pub_key
   vapid_prv_key: !secret html5_prv_key
-  vapid_email: !secret html_email
+  vapid_email: !secret html5_email
   gcm_api_key: !secret html5_key
   gcm_sender_id: !secret html5_id
