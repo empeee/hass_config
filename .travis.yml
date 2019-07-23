@@ -2,6 +2,10 @@ language: python
 python:
     - "3.6"
 
+env:
+  - HASS='homeassistant'
+  - HASS='--pre homeassistant'
+
 before_install:
     - mv travis_secrets.yaml secrets.yaml
     - touch /tmp/test.txt
@@ -9,7 +13,7 @@ before_install:
     - sudo apt-get update && sudo apt-get install -y libudev-dev
 
 install:
-    - pip3 install homeassistant && pip3 install colorama && pip3 install colorlog
+    - pip3 install $HASS && pip3 install colorama && pip3 install colorlog
 
 script:
     - hass -c . --script check_config
