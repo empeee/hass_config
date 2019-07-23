@@ -13,7 +13,7 @@ arlo: !include include/arlo.yaml
 automation: !include automations.yaml
 camera: !include include/camera.yaml
 config:
-device_tracker: !include include/device_tracker.yaml
+
 discovery:
   ignore:
     - songpal

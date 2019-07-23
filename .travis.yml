@@ -5,7 +5,7 @@ python:
 before_install:
     - mv travis_secrets.yaml secrets.yaml
     - touch /tmp/test.txt
-    - sed -i -e 's/device_tracker\:\s\!include\sinclude\/device_tracker.yaml'
+    - sed -i -e 's/device_tracker\:\s\!include\sinclude\/device_tracker.yaml//g' configuration.yaml
     - sudo apt-get update && sudo apt-get install -y libudev-dev
 
 install:
