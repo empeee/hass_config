@@ -1,5 +1,8 @@
 - platform: template
   sensors:
+#
+# Average Temperature Calculations
+#
     basement_temp:
       friendly_name: Basement Avg. Temperature
       unit_of_measurement: "°F"
@@ -10,60 +13,63 @@
       friendly_name: Downstairs Avg. Temperature
       unit_of_measurement: "°F"
       value_template: >-
-        {{ (float(states.sensor.ms_kitchen_temperature.state) + float(states.sensor.ms_family_room_temperature.state) + float(states.sensor.family_room_temperature.state) + float(states.sensor.ms_living_room_temperature.state) + float(states.sensor.living_room_temperature.state)) / 5 | round(2) }}
+        {{ (float(states.sensor.ms_kitchen_temperature.state) + float(states.sensor.ms_family_room_temperature.state) + float(states.sensor.climate_family_room_temperature.state) + float(states.sensor.ms_living_room_temperature.state) + float(states.sensor.climate_living_room_temperature.state)) / 5 | round(2) }}
 
     upstairs_temp:
       friendly_name: Upstairs Avg. Temperature
       unit_of_measurement: "°F"
       value_template: >-
-        {{ (float(states.sensor.master_bedroom_temperature.state) + float(states.sensor.jake_bedroom_temperature.state) + float(states.sensor.upstairs_hall_temperature.state)) / 3 | round(2) }}
+        {{ (float(states.sensor.climate_master_bedroom_temperature.state) + float(states.sensor.climate_jake_bedroom_temperature.state) + float(states.sensor.climate_upstairs_hall_temperature.state)) / 3 | round(2) }}
 
+#
+# Thermostat States
+#
     living_room_tstat_state:
       friendly_name: Living Room State
-      entity_id: climate.living_room_heating_1
+      entity_id: climate.living_room_heating
       value_template: >-
-        {% if states.climate.living_room_heating_1 %}
-          {{ states.climate.living_room_heating_1.attributes.operation_mode}}
+        {% if states.climate.living_room_heating %}
+          {{ states.climate.living_room_heating.attributes.hvac_action}}
         {% else %}
           N/A
         {% endif %}
 
     family_room_tstat_state:
       friendly_name: Family Room State
-      entity_id: climate.family_room_heating_1
+      entity_id: climate.family_room_heating
       value_template: >-
-        {% if states.climate.family_room_heating_1 %}
-          {{ states.climate.family_room_heating_1.attributes.operation_mode }}
+        {% if states.climate.family_room_heating %}
+          {{ states.climate.family_room_heating.attributes.hvac_action}}
         {% else %}
           N/A
         {% endif %}
 
     master_bedroom_tstat_state:
       friendly_name: Master Bedroom State
-      entity_id: climate.master_bedroom_heating_1
+      entity_id: climate.master_bedroom_heating
       value_template: >-
-        {% if states.climate.master_bedroom_heating_1 %}
-          {{ states.climate.master_bedroom_heating_1.attributes.operation_mode }}
+        {% if states.climate.master_bedroom_heating %}
+          {{ states.climate.master_bedroom_heating.attributes.hvac_action}}
         {% else %}
           N/A
         {% endif %}
 
     jake_bedroom_tstat_state:
       friendly_name: Jake Bedroom State
-      entity_id: climate.jake_bedroom_heating_1
+      entity_id: climate.jake_bedroom_heating
       value_template: >-
-        {% if states.climate.jake_bedroom_heating_1 %}
-          {{ states.climate.jake_bedroom_heating_1.attributes.operation_mode }}
+        {% if states.climate.jake_bedroom_heating %}
+          {{ states.climate.jake_bedroom_heating.attributes.hvac_action}}
         {% else %}
           N/A
         {% endif %}
 
     upstairs_hall_tstat_state:
       friendly_name: Upstairs Hall State
-      entity_id: climate.upstairs_hall_cooling_1
+      entity_id: climate.upstairs_hall_cooling
       value_template: >-
-        {% if states.climate.upstairs_hall_cooling_1 %}
-          {{ states.climate.upstairs_hall_cooling_1.attributes.operation_mode }}
+        {% if states.climate.upstairs_hall_cooling %}
+          {{ states.climate.upstairs_hall_cooling.attributes.hvac_action}}
         {% else %}
           N/A
         {% endif %}
@@ -107,37 +113,6 @@
           Motion
         {% elif is_state("sensor.ms_basement_burglar", "3") %}
           Tamper
-        {% else %}
-          Still
-        {% endif %}
-
-#
-# Composite Motion Sensors
-#
-    downstairs_motion:
-      friendly_name: Downstairs Motion
-      value_template: >-
-        {% if is_state("sensor.ms_living_room_burglar", "8") or is_state("sensor.ms_family_room_burglar", "8") or is_state("sensor.ms_kitchen_burglar", "8") %}
-          Motion
-        {% else %}
-          Still
-        {% endif %}
-#
-# Filtered Motion Sensors
-#
-    downstairs_motion_filtered:
-      friendly_name: Downstairs Motion
-      value_template: >-
-        {% if is_state("input_boolean.motion_downstairs", "on") %}
-          Motion
-        {% else %}
-          Still
-        {% endif %}
-    basement_motion_filtered:
-      friendly_name: Basement Motion
-      value_template: >-
-        {% if is_state("input_boolean.motion_basement", "on") %}
-          Motion
         {% else %}
           Still
         {% endif %}

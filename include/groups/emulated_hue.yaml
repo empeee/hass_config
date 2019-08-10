@@ -1,9 +1,0 @@
-#
-# Custom 'Whole House Lights' group for emulated_hue
-#
-Whole House Lights:
-  entities:
-    - group.family_room_lights
-    - group.living_room_lights
-    - group.kitchen_lights
-    - group.outside_lights

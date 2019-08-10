@@ -1,34 +1,34 @@
-climate.family_room_cooling_1:
+climate.family_room_cooling:
   hidden: true
-climate.family_room_heating_1:
+climate.family_room_heating:
   friendly_name: Family Room
 sensor.family_room_temperature:
   friendly_name: Family Room Thermostat
 
-climate.living_room_cooling_1:
+climate.living_room_cooling:
   hidden: true
-climate.living_room_heating_1:
+climate.living_room_heating:
   friendly_name: Living Room
 sensor.living_room_temperature:
   friendly_name: Living Room Thermostat
 
-climate.master_bedroom_cooling_1:
+climate.master_bedroom_cooling:
   hidden: true
-climate.master_bedroom_heating_1:
+climate.master_bedroom_heating:
   friendly_name: Master Bedroom
 sensor.master_bedroom_temperature:
   friendly_name: Master Bedroom Thermostat
 
-climate.jake_bedroom_cooling_1:
+climate.jake_bedroom_cooling:
   hidden: true
-climate.jake_bedroom_heating_1:
+climate.jake_bedroom_heating:
   friendly_name: Jake Bedroom
 sensor.jake_bedroom_temperature:
   friendly_name: Jake Bedroom Thermostat
 
-climate.upstairs_hall_cooling_1:
+climate.upstairs_hall_cooling:
   friendly_name: Upstairs Hall
-climate.upstairs_hall_heating_1:
+climate.upstairs_hall_heating:
   hidden: true
 sensor.upstairs_hall_temperature:
   friendly_name: Upstairs Hall Thermostat

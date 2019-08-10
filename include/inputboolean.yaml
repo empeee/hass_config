@@ -22,12 +22,6 @@ flux_kitchen:
   name: Flux Kitchen Lights
   icon: mdi:lightbulb
 
-motion_downstairs:
-  name: Motion Downstairs
-
-motion_basement:
-  name: Motion Basement
-
 heat_automation:
   name: Heating
   icon: mdi:thermostat

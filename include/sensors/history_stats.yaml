@@ -1,5 +1,5 @@
 - platform: history_stats
-  entity_id: climate.upstairs_hall_cooling_1
+  entity_id: climate.upstairs_hall_cooling
   name: Cooling On
   state: 'cool'
   type: time
@@ -8,7 +8,7 @@
     hours: 24
 
 - platform: history_stats
-  entity_id: climate.family_room_heating_1
+  entity_id: climate.family_room_heating
   name: Heating On
   state: 'heat'
   type: time

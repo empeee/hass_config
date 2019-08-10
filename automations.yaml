@@ -1,55 +1,55 @@
 - id: climate_cool_switch_on
   alias: Climate Cool Switch On
   trigger:
-  - platform: state
-    entity_id: input_boolean.cool_automation
+  - entity_id: input_boolean.cool_automation
+    platform: state
     to: 'on'
   action:
-  - service: climate.set_operation_mode
-    data:
-      entity_id: climate.upstairs_hall_cooling_1
-      operation_mode: Cool
+  - data:
+      entity_id: climate.upstairs_hall_cooling
+      hvac_mode: cool
+    service: climate.set_hvac_mode
 - id: climate_cool_switch_off
   alias: Climate Cool Switch Off
   trigger:
-  - platform: state
-    entity_id: input_boolean.cool_automation
+  - entity_id: input_boolean.cool_automation
+    platform: state
     to: 'off'
   action:
-  - service: climate.set_operation_mode
-    data:
+  - data:
       entity_id: group.cooling_thermostats
-      operation_mode: 'Off'
+      hvac_mode: 'off'
+    service: climate.set_hvac_mode
 - id: climate_heat_switch_on
   alias: Climate Heat Switch On
   trigger:
-  - platform: state
-    entity_id: input_boolean.heat_automation
+  - entity_id: input_boolean.heat_automation
+    platform: state
     to: 'on'
   action:
-  - service: climate.set_operation_mode
-    data:
+  - data:
       entity_id: group.downstairs_thermostats
-      operation_mode: Heat
-  - service: climate.set_operation_mode
-    data:
+      hvac_mode: heat
+    service: climate.set_hvac_mode
+  - data:
       entity_id: group.upstairs_thermostats
-      operation_mode: Heat
+      hvac_mode: heat
+    service: climate.set_hvac_mode
 - id: climate_heat_switch_off
   alias: Climate Heat Switch Off
   trigger:
-  - platform: state
-    entity_id: input_boolean.heat_automation
+  - entity_id: input_boolean.heat_automation
+    platform: state
     to: 'off'
   action:
-  - service: climate.set_operation_mode
-    data:
+  - data:
       entity_id: group.downstairs_thermostats
-      operation_mode: 'Off'
-  - service: climate.set_operation_mode
-    data:
+      hvac_mode: 'off'
+    service: climate.set_hvac_mode
+  - data:
       entity_id: group.upstairs_thermostats
-      operation_mode: 'Off'
+      hvac_mode: 'off'
+    service: climate.set_hvac_mode
 - id: climate_vacation_switch_on
   alias: Climate Vacation Switch On
   trigger:
@@ -202,21 +202,21 @@
     - group.kitchen_lights
     - group.outside_lights
 - id: basement_guest_sunrise_lights
-  alias: Basement Guest Sunrise Lights
+  alias: Light Basement Guest Sunrise
   trigger:
-    platform: sun
-    event: sunrise
+  - event: sunrise
     offset: -00:15:00
+    platform: sun
   condition:
-    condition: state
+  - condition: state
     entity_id: input_boolean.guest_mode
     state: 'on'
   action:
-    service: light.turn_on
-    data:
+  - data:
+      brightness: 254
       entity_id: light.basement_couch
       transition: 1800
-      brightness: 254
+    service: light.turn_on
 - id: light_sunset_vacation
   alias: Light Sunset Vacation
   trigger:
@@ -287,38 +287,38 @@
       - scene.family_room_lights_away
       - scene.living_room_lights_away
 - id: basement_hot_water_tank_change
-  alias: Basement Hot Water Tank Change
+  alias: Leak Sensor Basement Hot Water
   trigger:
+  - entity_id: binary_sensor.basement_hot_water_liquid_detected
     platform: state
-    entity_id: binary_sensor.basement_hot_water_liquid_detected
   action:
-    service: notify.html5
-    data:
-      title: Water System Notification
+  - data:
       message: Hot water tank leak {% if is_state("binary_sensor.basement_hot_water_liquid_detected",
         "off") %}not {% endif %}detected.
-- id: basement_sump_pump_change
-  alias: Basement Sump Pump Change
-  trigger:
-    platform: state
-    entity_id: binary_sensor.basement_sump_liquid_detected
-  action:
-    service: notify.html5
-    data:
       title: Water System Notification
+    service: notify.html5
+- id: basement_sump_pump_change
+  alias: Leak Sensor Basement Sump Pump
+  trigger:
+  - entity_id: binary_sensor.basement_sump_liquid_detected
+    platform: state
+  action:
+  - data:
       message: Sump pump leak {% if is_state("binary_sensor.basement_sump_liquid_detected",
         "off") %}not {% endif %}detected.
-- id: basement_water_tank_change
-  alias: Basement Water Tank Change
-  trigger:
-    platform: state
-    entity_id: binary_sensor.basement_water_liquid_detected
-  action:
-    service: notify.html5
-    data:
       title: Water System Notification
+    service: notify.html5
+- id: basement_water_tank_change
+  alias: Leak Sensor Basement Water System
+  trigger:
+  - entity_id: binary_sensor.basement_water_liquid_detected
+    platform: state
+  action:
+  - data:
       message: Water tank leak {% if is_state("binary_sensor.basement_water_liquid_detected",
         "off") %}not {% endif %}detected.
+      title: Water System Notification
+    service: notify.html5
 - id: notify_on_failed_login
   alias: Notify Failed Login
   trigger:
