@@ -46,25 +46,85 @@
           Unknown
         {% endif %}
 #
+# Smoke Alarm Battery
+#
+    smoke_detector_basement_battery:
+      friendly_name: Smoke Detector Basement Battery
+      value_template: >-
+        {{ state_attr('zwave.smoke_detector_basement', 'battery_level')|int }}
+      unit_of_measurement: '%'
+      icon_template: >-
+        {% set battery_level = states('sensor.smoke_detector_basement_battery')|int('unkown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {%if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
+    smoke_detector_foyer_battery:
+      friendly_name: Smoke Detector Foyer Battery
+      value_template: >-
+        {{ state_attr('zwave.smoke_detector_foyer', 'battery_level')|int }}
+      unit_of_measurement: '%'
+      icon_template: >-
+        {% set battery_level = states('sensor.smoke_detector_foyer_battery')|int('unkown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {%if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
+    smoke_detector_upstairs_hall_battery:
+      friendly_name: Smoke Detector Upstairs Hall Battery
+      value_template: >-
+        {{ state_attr('zwave.smoke_detector_upstairs_hall', 'battery_level')|int }}
+      unit_of_measurement: '%'
+      icon_template: >-
+        {% set battery_level = states('sensor.smoke_detector_upstairs_hall_battery')|int('unkown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {%if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
+#
 # Average Temperature Calculations
 #
     basement_temp:
       friendly_name: Basement Avg. Temperature
       unit_of_measurement: "°F"
       value_template: >-
-        {{ (float(states.sensor.ms_basement_temperature.state)) / 1 | round(2) }}
+        {{ ((float(states.sensor.ms_basement_temperature.state)) / 1) | round(2) }}
 
     downstairs_temp:
       friendly_name: Downstairs Avg. Temperature
       unit_of_measurement: "°F"
       value_template: >-
-        {{ (float(states.sensor.ms_kitchen_temperature.state) + float(states.sensor.ms_family_room_temperature.state) + float(states.sensor.climate_family_room_temperature.state) + float(states.sensor.ms_living_room_temperature.state) + float(states.sensor.climate_living_room_temperature.state)) / 5 | round(2) }}
+        {{ ((float(states.sensor.ms_kitchen_temperature.state) + float(states.sensor.ms_family_room_temperature.state) + float(states.sensor.climate_family_room_temperature.state) + float(states.sensor.ms_living_room_temperature.state) + float(states.sensor.climate_living_room_temperature.state)) / 5) | round(2) }}
 
     upstairs_temp:
       friendly_name: Upstairs Avg. Temperature
       unit_of_measurement: "°F"
       value_template: >-
-        {{ (float(states.sensor.climate_master_bedroom_temperature.state) + float(states.sensor.climate_jake_bedroom_temperature.state) + float(states.sensor.climate_upstairs_hall_temperature.state)) / 3 | round(2) }}
+        {{ ((float(states.sensor.climate_master_bedroom_temperature.state) + float(states.sensor.climate_jake_bedroom_temperature.state) + float(states.sensor.climate_upstairs_hall_temperature.state)) / 3) | round(2) }}
 #
 # Thermostat States
 #
@@ -159,4 +219,143 @@
           Tamper
         {% else %}
           Still
+        {% endif %}
+#
+# Leak Sensor Battery
+#
+    leak_sensor_hot_water_battery:
+      friendly_name: Leak Sensor Hot Water Battery
+      value_template: >-
+        {{ state_attr('binary_sensor.basement_hot_water_liquid_detected_2', 'battery_level')|int  }}
+      unit_of_measurement: '%'
+      icon_template: >-
+        {% set battery_level = states('sensor.leak_sensor_hot_water_battery')|int('unkown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {%if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
+    leak_sensor_water_battery:
+      friendly_name: Leak Sensor Water System Battery
+      value_template: >-
+        {{ state_attr('binary_sensor.basement_water_liquid_detected_2', 'battery_level')|int }}
+      unit_of_measurement: '%'
+      icon_template: >-
+        {% set battery_level = states('sensor.leak_sensor_water_battery')|int('unkown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {%if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
+    leak_sensor_sump_battery:
+      friendly_name: Leak Sensor Sump Battery
+      value_template: >-
+        {{ state_attr('binary_sensor.basement_sump_liquid_detected_2', 'battery_level')|int }}
+      unit_of_measurement: '%'
+      icon_template: >-
+        {% set battery_level = states('sensor.leak_sensor_sump_battery')|int('unkown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {%if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
+#
+# Multi Sensor Battery
+#
+    ms_basement_battery:
+      friendly_name: MultiSenor Basement Battery
+      value_template: >-
+        {{ state_attr('zwave.ms_basement', 'battery_level')|int }}
+      unit_of_measurement: '%'
+      icon_template: >-
+        {% set battery_level = states('sensor.ms_basement_battery')|int('unkown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {%if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
+    ms_family_room_battery:
+      friendly_name: MultiSenor Family RoomBattery
+      value_template: >-
+        {{ state_attr('zwave.ms_family_room', 'battery_level')|int }}
+      unit_of_measurement: '%'
+      icon_template: >-
+        {% set battery_level = states('sensor.ms_family_room_battery')|int('unkown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {%if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
+    ms_kitchen_battery:
+      friendly_name: MultiSenor Kitchen Battery
+      value_template: >-
+        {{ state_attr('zwave.ms_kitchen', 'battery_level')|int }}
+      unit_of_measurement: '%'
+      icon_template: >-
+        {% set battery_level = states('sensor.ms_kitchen_battery')|int('unkown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {%if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
+    ms_living_room_battery:
+      friendly_name: MultiSenor Living Room Battery
+      value_template: >-
+        {{ state_attr('zwave.ms_living_room', 'battery_level')|int }}
+      unit_of_measurement: '%'
+      icon_template: >-
+        {% set battery_level = states('sensor.ms_living_room_battery')|int('unkown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {%if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
         {% endif %}

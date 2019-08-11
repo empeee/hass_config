@@ -6,3 +6,4 @@ sensor.smoke_detector_foyer:
 
 sensor.smoke_detector_upstairs_hall:
   icon: mdi:smoke-detector
+    
