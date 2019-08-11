@@ -1,35 +1,24 @@
-sensor.pws_weather:
-  friendly_name: Weather Summary
-sensor.pws_alerts:
-  friendly_name: Weather Alerts
-  icon: 'mdi:alert'
-sensor.pws_station_id:
-  friendly_name: Station ID
-  icon: 'mdi:fingerprint'
-sensor.pws_temp_f:
-  friendly_name: Temperature
-  icon: 'mdi:thermometer'
-sensor.pws_dewpoint_f:
-  friendly_name: Dew Point
-  icon: 'mdi:oil-temperature'
-sensor.pws_relative_humidity:
-  friendly_name: Relative Humidity
-  icon: 'mdi:water-percent'
-sensor.pws_feelslike_f:
-  friendly_name: Feels Like
-  icon: 'mdi:account-alert'
-sensor.pws_uv:
-  friendly_name: UV Index
-  icon: 'mdi:sunglasses'
-sensor.pws_wind_mph:
-  friendly_name: Wind Speed
+sensor.pude_farm_wind_speed_2:
   icon: 'mdi:weather-windy'
-sensor.pws_wind_dir:
-  friendly_name: Wind Direction
-  icon: 'mdi:compass'
-sensor.pws_precip_today_in:
-  friendly_name: Precip Today
-  icon: 'mdi:water'
-sensor.pws_pressure_in:
-  friendly_name: Pressure
-  icon: 'mdi:nature'
+sensor.pude_farm_wind_gust_2:
+  icon: 'mdi:weather-windy'
+sensor.pude_farm_max_gust_2:
+  icon: 'mdi:weather-windy'
+sensor.pude_farm_wind_dir_2:
+  icon: 'mdi:compass-outline'
+sensor.pude_farm_hourly_rain_rate_2:
+  icon: 'mdi:weather-rainy'
+sensor.pude_farm_daily_rain_2:
+  icon: 'mdi:weather-rainy'
+sensor.pude_farm_weekly_rain_2:
+  icon: 'mdi:weather-rainy'
+sensor.pude_farm_monthly_rain_2:
+  icon: 'mdi:weather-rainy'
+sensor.pude_farm_yearly_rain_2:
+  icon: 'mdi:weather-rainy'
+sensor.pude_farm_last_rain_2:
+  icon: 'mdi:weather-rainy'
+sensor.pude_farm_uv:
+  icon: 'mdi:weather-sunny'
+sensor.pude_farm_solar_rad_2:
+  icon: 'mdi:weather-sunny'

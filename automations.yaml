@@ -347,7 +347,9 @@
       value_template: '{{ states.sensor.fail2ban_nginxbotsearch.state != "None" }}'
   action:
   - data:
-      message: Fail2ban failed login
+      message: '{{ now().strftime("%h %d, %Y at %H:%M:%S") }}
+
+        Fail2ban failed login'
       title: Fail2ban failed login
     data_template:
       message: 'Failed Login! {{ now().strftime("%h %d, %Y at %H:%M:%S") }} {% if
@@ -367,6 +369,50 @@
   condition: []
   action:
   - data:
-      message: Hass reboot complete
+      message: '{{ now().strftime("%h %d, %Y at %H:%M:%S") }}
+
+        Hass reboot complete'
       title: Hass Reboot Complete
+    service: notify.html5
+- id: '1565527517156'
+  alias: Notify Smoke Detector
+  trigger:
+  - entity_id: sensor.smoke_detector_basement
+    platform: state
+    to: Fire
+  - entity_id: sensor.smoke_detector_basement
+    platform: state
+    to: CO
+  - entity_id: sensor.smoke_detector_basement
+    platform: state
+    to: Testing
+  - entity_id: sensor.smoke_detector_foyer
+    platform: state
+    to: Fire
+  - entity_id: sensor.smoke_detector_foyer
+    platform: state
+    to: CO
+  - entity_id: sensor.smoke_detector_foyer
+    platform: state
+    to: Testing
+  - entity_id: sensor.smoke_detector_upstairs_hall
+    platform: state
+    to: Fire
+  - entity_id: sensor.smoke_detector_upstairs_hall
+    platform: state
+    to: CO
+  - entity_id: sensor.smoke_detector_upstairs_hall
+    platform: state
+    to: Testing
+  condition: []
+  action:
+  - data:
+      message: '{{ now().strftime("%h %d, %Y at %H:%M:%S") }}
+
+        Basement: {{states.sensor.smoke_detector_basement.state}}
+
+        Foyer: {{states.sensor.smoke_detector_foyer.state}}
+
+        Upstairs Hall: {{states.sensor.smoke_detector_upstairs_hall.state}}'
+      title: Smoke Detector Triggered
     service: notify.html5
