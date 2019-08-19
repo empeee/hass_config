@@ -17,7 +17,7 @@ device_tracker: !include include/device_tracker.yaml
 discovery:
   ignore:
     - songpal
-frontend:
+frontend: !include include/frontend.yaml
 google_assistant: !include include/google_assistant.yaml
 group: !include_dir_merge_named include/groups
 history: !include include/history.yaml

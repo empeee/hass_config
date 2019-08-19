@@ -1,1 +1,4 @@
 - platform: arlo
+  home_mode_name: schedule
+  away_mode_name: armed_away
+  night_mode_name: schedule
