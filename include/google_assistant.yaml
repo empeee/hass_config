@@ -1,7 +1,4 @@
 project_id: !secret ga_project_id
-#client_id: !secret ga_client_id
-#access_token: !secret ga_access_token
-#agent_user_id: !secret ga_agent_id
 api_key: !secret ga_api_key
 expose_by_default: false
 entity_config:
@@ -33,7 +30,7 @@ entity_config:
     expose: true
   light.bedroom_chair:
     expose: true
-  light.family_room_ceiling_level:
+  light.family_room_ceiling:
     expose: true
     name: Family Room Ceiling
   light.family_room_couch:
@@ -92,9 +89,9 @@ entity_config:
     expose: true
   scene.outside_lights_normal:
     expose: true
-  switch.outside_front_porch_switch:
+  switch.outside_front_porch:
     expose: true
     name: Outside Front Porch
-  switch.outside_garage_switch:
+  switch.outside_garage:
     expose: true
     name: Outside Garage
