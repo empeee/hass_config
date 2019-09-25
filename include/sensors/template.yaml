@@ -419,3 +419,41 @@
             mdi:battery-alert
           {% endif %}
         {% endif %}
+    climate_master_bedroom_battery:
+      friendly_name: Thermostat Master Bedroom Battery
+      value_template: >-
+        {{ state_attr('zwave.climate_master_bedroom', 'battery_level')|int }}
+      unit_of_measurement: '%'
+      icon_template: >-
+        {% set battery_level = states('sensor.climate_master_bedroom_battery')|int('unkown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {%if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
+    climate_jake_bedroom_battery:
+      friendly_name: Thermostat Jake Bedroom Battery
+      value_template: >-
+        {{ state_attr('zwave.climate_jake_bedroom', 'battery_level')|int }}
+      unit_of_measurement: '%'
+      icon_template: >-
+        {% set battery_level = states('sensor.climate_jake_bedroom_battery')|int('unkown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {%if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert
+          {% endif %}
+        {% endif %}
