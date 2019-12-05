@@ -51,3 +51,14 @@ sensor.ps_general1_previous_reading:
 sensor.ps_general1_voltage:
   friendly_name: Dehumidifier Voltage
   icon: mdi:flash
+
+sensor.ps_general2_current:
+  icon: mdi:arrow-down-bold-circle-outline
+sensor.ps_general2_energy:
+  icon: mdi:power-plug
+sensor.ps_general2_power:
+  icon: mdi:power
+sensor.ps_general2_previous_reading:
+  hidden: True
+sensor.ps_general2_voltage:
+  icon: mdi:flash
