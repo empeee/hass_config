@@ -3,7 +3,7 @@
 #
 - name: Outside Lights - Normal
   entities:
-    switch.outside_front_porch_switch:
+    switch.outside_front_porch:
       state: on
-    switch.outside_garage_switch:
+    switch.outside_garage:
       state: on
