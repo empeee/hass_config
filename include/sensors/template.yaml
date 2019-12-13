@@ -130,50 +130,50 @@
 #
     living_room_tstat_state:
       friendly_name: Living Room State
-      entity_id: climate.living_room_heating
+      entity_id: climate.living_room_mode
       value_template: >-
-        {% if states.climate.living_room_heating %}
-          {{ states.climate.living_room_heating.attributes.hvac_action}}
+        {% if states.climate.living_room_mode %}
+          {{ states.climate.living_room_mode.attributes.hvac_action}}
         {% else %}
           N/A
         {% endif %}
 
     family_room_tstat_state:
       friendly_name: Family Room State
-      entity_id: climate.family_room_heating
+      entity_id: climate.family_room_mode
       value_template: >-
-        {% if states.climate.family_room_heating %}
-          {{ states.climate.family_room_heating.attributes.hvac_action}}
+        {% if states.climate.family_room_mode %}
+          {{ states.climate.family_room_mode.attributes.hvac_action}}
         {% else %}
           N/A
         {% endif %}
 
     master_bedroom_tstat_state:
       friendly_name: Master Bedroom State
-      entity_id: climate.master_bedroom_heating
+      entity_id: climate.master_bedroom_mode
       value_template: >-
-        {% if states.climate.master_bedroom_heating %}
-          {{ states.climate.master_bedroom_heating.attributes.hvac_action}}
+        {% if states.climate.master_bedroom_mode %}
+          {{ states.climate.master_bedroom_mode.attributes.hvac_action}}
         {% else %}
           N/A
         {% endif %}
 
     jake_bedroom_tstat_state:
       friendly_name: Jake Bedroom State
-      entity_id: climate.jake_bedroom_heating
+      entity_id: climate.jake_bedroom_mode
       value_template: >-
-        {% if states.climate.jake_bedroom_heating %}
-          {{ states.climate.jake_bedroom_heating.attributes.hvac_action}}
+        {% if states.climate.jake_bedroom_mode %}
+          {{ states.climate.jake_bedroom_mode.attributes.hvac_action}}
         {% else %}
           N/A
         {% endif %}
 
     upstairs_hall_tstat_state:
       friendly_name: Upstairs Hall State
-      entity_id: climate.upstairs_hall_cooling
+      entity_id: climate.upstairs_hall_mode
       value_template: >-
-        {% if states.climate.upstairs_hall_cooling %}
-          {{ states.climate.upstairs_hall_cooling.attributes.hvac_action}}
+        {% if states.climate.upstairs_hall_mode %}
+          {{ states.climate.upstairs_hall_mode.attributes.hvac_action}}
         {% else %}
           N/A
         {% endif %}
