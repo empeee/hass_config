@@ -1,21 +1,27 @@
 usb_path: /zwaveusbstick
 polling_interval: 30000
 device_config:
-  light.family_room_ceiling_level:
+  light.family_room_ceiling:
     polling_intensity: 1
     refresh_value: true
   light.basement_office:
     polling_intensity: 1
     refresh_value: true
-  switch.outside_front_porch_switch:
+  switch.outside_front_porch:
     polling_intensity: 1
     refresh_value: true
-  switch.outside_garage_switch:
+  switch.outside_garage:
     polling_intensity: 1
     refresh_value: true
-  sensor.family_room_temperature:
+  sensor.climate_family_room_temperature:
     polling_intensity: 1
     refresh_value: true
-  sensor.living_room_temperature:
+  sensor.climate_living_room_temperature:
+    polling_intensity: 1
+    refresh_value: true
+  sensor.climate_master_bedroom_temperature:
+    polling_intensity: 1
+    refresh_value: true
+  sensor.climate_jake_bedroom_temperature:
     polling_intensity: 1
     refresh_value: true
