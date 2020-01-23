@@ -19,9 +19,9 @@ device_config:
   sensor.climate_living_room_temperature:
     polling_intensity: 1
     refresh_value: true
-  sensor.climate_master_bedroom_temperature:
-    polling_intensity: 1
-    refresh_value: true
-  sensor.climate_jake_bedroom_temperature:
-    polling_intensity: 1
-    refresh_value: true
+#  sensor.climate_master_bedroom_temperature:
+#    polling_intensity: 1
+#    refresh_value: true
+#  sensor.climate_jake_bedroom_temperature:
+#    polling_intensity: 1
+#    refresh_value: true
