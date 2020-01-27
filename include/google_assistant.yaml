@@ -2,15 +2,15 @@ project_id: !secret ga_project_id
 api_key: !secret ga_api_key
 expose_by_default: false
 entity_config:
-  climate.living_room_heating:
+  climate.living_room_mode:
     expose: true
-  climate.family_room_heating:
+  climate.family_room_mode:
     expose: true
-  climate.jake_bedroom_heating:
+  climate.jake_bedroom_mode:
     expose: true
-  climate.master_bedroom_heating:
+  climate.master_bedroom_mode:
     expose: true
-  climate.upstairs_hall_cooling:
+  climate.upstairs_hall_mode:
     expose: true
   input_boolean.vacation_mode:
     expose: true
