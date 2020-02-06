@@ -13,5 +13,5 @@
 /secrets.yaml
 /www/
 /.storage/
-ui-lovelace.yaml
 arlo-lapse/
+include/hass-googleassistant-service-account.json
