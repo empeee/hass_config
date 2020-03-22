@@ -1,9 +1,0 @@
-sensor.smoke_detector_basement:
-  icon: mdi:smoke-detector
-
-sensor.smoke_detector_foyer:
-  icon: mdi:smoke-detector
-
-sensor.smoke_detector_upstairs_hall:
-  icon: mdi:smoke-detector
-    
