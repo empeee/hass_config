@@ -1,10 +1,10 @@
-homeassistant:
-  name: Home
-  latitude: !secret latitude
-  longitude: !secret longitude
-  elevation: !secret elevation
-  unit_system: imperial
-  time_zone: America/New_York
+#homeassistant:
+#  name: Home
+#  latitude: !secret latitude
+#  longitude: !secret longitude
+#  elevation: !secret elevation
+#  unit_system: imperial
+#  time_zone: America/New_York
 
 alarm_control_panel: !include include/alarm_control_panel.yaml
 ambient_station: !include include/ambientstation.yaml
