@@ -39,7 +39,7 @@
       color_name: green
       brightness: 254
       transition: 2
-    light.family_room_ceiling_level:
+    light.dimmer_family_room_ceiling:
       state: off
     light.kitchen_1:
       state: on
@@ -102,7 +102,7 @@
       brightness: 254
       kelvin: 2800
       transition: 2
-    light.family_room_ceiling_level:
+    light.dimmer_family_room_ceiling:
       state: off
     light.kitchen_1:
       state: on
@@ -129,7 +129,7 @@
       brightness: 254
       kelvin: 2800
       transition: 2
-    switch.outside_front_porch_switch:
+    switch.switch_outside_front_porch_switch:
       state: on
-    switch.outside_garage_switch:
+    switch.switch_outside_garage_switch:
       state: on

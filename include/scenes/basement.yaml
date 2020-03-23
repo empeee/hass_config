@@ -18,7 +18,7 @@
     light.basement_guest:
       state: on
       brightness: 254
-    light.basement_office:
+    light.dimmer_basement_office:
       state: on
       brightness: 154
 
@@ -39,6 +39,6 @@
     light.basement_guest:
       state: on
       brightness: 154
-    light.basement_office:
+    light.dimmer_basement_office:
       state: on
       brightness: 154

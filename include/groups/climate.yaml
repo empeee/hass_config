@@ -3,14 +3,14 @@
 #
 Downstairs Thermostats:
   entities:
-    - climate.family_room_mode
-    - climate.living_room_mode
+    - climate.thermostat_family_room
+    - climate.thermostat_living_room
 
 Upstairs Thermostats:
   entities:
-    - climate.master_bedroom_mode
-    - climate.jake_bedroom_mode
+    - climate.thermostat_master_bedroom
+    - climate.thermostat_jake_bedroom
 
 Cooling Thermostats:
   entities:
-    - climate.upstairs_hall_mode
+    - climate.thermostat_upstairs_hall

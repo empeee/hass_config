@@ -67,13 +67,13 @@
             mdi:battery-alert
           {% endif %}
         {% endif %}
-    smoke_detector_foyer_battery:
-      friendly_name: Smoke Detector Foyer Battery
+    smoke_detector_dining_room_battery:
+      friendly_name: Smoke Detector Dining Room Battery
       value_template: >-
-        {{ state_attr('zwave.smoke_detector_foyer', 'battery_level')|int }}
+        {{ state_attr('zwave.smoke_detector_dining_room', 'battery_level')|int }}
       unit_of_measurement: '%'
       icon_template: >-
-        {% set battery_level = states('sensor.smoke_detector_foyer_battery')|int('unkown') %}
+        {% set battery_level = states('sensor.smoke_detector_dining_room_battery')|int('unkown') %}
         {% set battery_round = (battery_level|int / 10)|int * 10 %}
         {% if battery_level == 'unknown' %}
           mdi:battery-unknown
@@ -112,19 +112,19 @@
       friendly_name: Basement Avg. Temperature
       unit_of_measurement: "°F"
       value_template: >-
-        {{ ((float(states.sensor.ms_basement_temperature.state)) / 1) | round(2) }}
+        {{ ((float(states.sensor.motionsensor_basement_temperature.state)) / 1) | round(2) }}
 
     downstairs_temp:
       friendly_name: Downstairs Avg. Temperature
       unit_of_measurement: "°F"
       value_template: >-
-        {{ ((float(states.sensor.ms_kitchen_temperature.state) + float(states.sensor.ms_family_room_temperature.state) + float(states.sensor.climate_family_room_temperature.state) + float(states.sensor.ms_living_room_temperature.state) + float(states.sensor.climate_living_room_temperature.state)) / 5) | round(2) }}
+        {{ ((float(states.sensor.motionsense_kitchen_temperature.state) + float(states.sensor.motionsensor_family_room_temperature.state) + float(states.sensor.thermostat_family_room_temperature.state) + float(states.sensor.motionsensor_living_room_temperature.state) + float(states.sensor.thermostat_living_room_temperature.state)) / 5) | round(2) }}
 
     upstairs_temp:
       friendly_name: Upstairs Avg. Temperature
       unit_of_measurement: "°F"
       value_template: >-
-        {{ ((float(states.sensor.climate_master_bedroom_temperature.state) + float(states.sensor.climate_jake_bedroom_temperature.state) + float(states.sensor.climate_upstairs_hall_temperature.state)) / 3) | round(2) }}
+        {{ ((float(states.sensor.thermostat_master_bedroom_temperature.state) + float(states.sensor.thermostat_jake_bedroom_temperature.state) + float(states.sensor.thermostat_upstairs_hall_temperature.state)) / 3) | round(2) }}
 #
 # Thermostat States
 #

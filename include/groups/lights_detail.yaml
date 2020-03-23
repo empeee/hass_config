@@ -3,7 +3,7 @@
 #
 Family Room Lights:
   entities:
-    - light.family_room_ceiling
+    - light.dimmer_family_room_ceiling
     - light.family_room_couch
     - light.family_room_piano
     - light.family_room_tv_light
@@ -32,13 +32,9 @@ Basement Lights:
     - light.basement_guest
     - light.basement_toys
     - light.basement_couch
-    - light.basement_office
+    - light.dimmer_basement_office
 
 Outside Lights:
   entities:
-    - switch.outside_front_porch
-    - switch.outside_garage
-
-Smart Switches:
-  entities:
-    - switch.ps_general1
+    - switch.switch_outside_front_porch
+    - switch.switch_outside_garage

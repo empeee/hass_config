@@ -2,15 +2,15 @@ project_id: !secret ga_project_id
 service_account: !include hass-googleassistant-service-account.json
 expose_by_default: false
 entity_config:
-  climate.living_room_mode:
+  climate.thermostat_living_room:
     expose: true
-  climate.family_room_mode:
+  climate.thermostat_family_room:
     expose: true
-  climate.jake_bedroom_mode:
+  climate.thermostat_jake_bedroom:
     expose: true
-  climate.master_bedroom_mode:
+  climate.thermostat_master_bedroom:
     expose: true
-  climate.upstairs_hall_mode:
+  climate.thermostat_upstairs_hall:
     expose: true
   input_boolean.vacation_mode:
     expose: true
@@ -24,13 +24,14 @@ entity_config:
     expose: true
   light.basement_toys:
     expose: true
-  light.basement_office:
+  light.dimmer_basement_office:
     expose: true
+    name: Basement Office
   light.bedroom_bed:
     expose: true
   light.bedroom_chair:
     expose: true
-  light.family_room_ceiling:
+  light.dimmer_family_room_ceiling:
     expose: true
     name: Family Room Ceiling
   light.family_room_couch:
@@ -89,9 +90,9 @@ entity_config:
     expose: true
   scene.outside_lights_normal:
     expose: true
-  switch.outside_front_porch:
+  switch.switch_outside_front_porch:
     expose: true
     name: Outside Front Porch
-  switch.outside_garage:
+  switch.switch_outside_garage:
     expose: true
     name: Outside Garage

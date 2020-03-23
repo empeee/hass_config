@@ -18,7 +18,7 @@
     light.family_room_tv_light:
       state: off
       transition: 2
-    light.family_room_ceiling_level:
+    light.dimmer_family_room_ceiling:
       state: off
 
 - name: Family Room Lights - Relax
@@ -40,7 +40,7 @@
       brightness: 154
       kelvin: 2200
       transition: 2
-    light.family_room_ceiling_level:
+    light.dimmer_family_room_ceiling:
       state: on
       brightness: 154
       kelvin: 2200
@@ -64,7 +64,7 @@
       brightness: 254
       kelvin: 2800
       transition: 2
-    light.family_room_ceiling_level:
+    light.dimmer_family_room_ceiling:
       state: on
       brightness: 254
       kelvin: 2800
@@ -88,7 +88,7 @@
       brightness: 54
       kelvin: 2200
       transition: 2
-    light.family_room_ceiling_level:
+    light.dimmer_family_room_ceiling:
       state: off
 
 - name: Family Room Lights - Watch Movie
@@ -110,7 +110,7 @@
       brightness: 50
       kelvin: 500
       transition: 2
-    light.family_room_ceiling_level:
+    light.dimmer_family_room_ceiling:
       state: off
 
 - name: Family Room Lights - Away
