@@ -1,4 +1,5 @@
-#homeassistant:
+homeassistant:
+  customize: !include customize.yaml
 #  name: Home
 #  latitude: !secret latitude
 #  longitude: !secret longitude
