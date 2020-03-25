@@ -386,13 +386,13 @@
   - entity_id: sensor.smoke_detector_basement
     platform: state
     to: Testing
-  - entity_id: sensor.smoke_detector_foyer
+  - entity_id: sensor.smoke_detector_dining_room
     platform: state
     to: Fire
-  - entity_id: sensor.smoke_detector_foyer
+  - entity_id: sensor.smoke_detector_dining_room
     platform: state
     to: CO
-  - entity_id: sensor.smoke_detector_foyer
+  - entity_id: sensor.smoke_detector_dining_room
     platform: state
     to: Testing
   - entity_id: sensor.smoke_detector_upstairs_hall
@@ -411,8 +411,8 @@
 
         Basement: {{states.sensor.smoke_detector_basement.state}}
 
-        Foyer: {{states.sensor.smoke_detector_foyer.state}}
+        Dining Room: {{states.sensor.smoke_detector_dining_room.state}}
 
         Upstairs Hall: {{states.sensor.smoke_detector_upstairs_hall.state}}'
       title: Smoke Detector Triggered
-    service: notify.html5
+    service: notify.notify

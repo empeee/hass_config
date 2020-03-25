@@ -1,0 +1,32 @@
+sensor.smoke_detector_basement:
+  icon: mdi:smoke-detector
+sensor.smoke_detector_dining_room:
+  icon: mdi:smoke-detector
+sensor.smoke_detector_upstairs_hall:
+  icon: mdi:smoke-detector
+sensor.multisensor_basement_motion:
+  icon: mdi:motion-sensor
+sensor.multisensor_family_room_motion:
+  icon: mdi:motion-sensor
+sensor.multisensor_kitchen_motion:
+  icon: mdi:motion-sensor
+sensor.multisensor_living_room_motion:
+  icon: mdi:motion-sensor
+sensor.multisensor_family_room_relative_humidity:
+  icon: mdi:water-percent
+sensor.multisensor_basement_relative_humidity:
+  icon: mdi:water-percent
+sensor.multisensor_kitchen_relative_humidity:
+  icon: mdi:water-percent
+sensor.multisensor_living_room_relative_humidity:
+  icon: mdi:water-percent
+sensor.thermostat_family_room_state:
+  icon: mdi:state-machine
+sensor.thermostat_jake_bedroom_state:
+  icon: mdi:state-machine
+sensor.thermostat_living_room_state:
+  icon: mdi:state-machine
+sensor.thermostat_master_bedroom_state:
+  icon: mdi:state-machine
+sensor.thermostat_upstairs_hall_state:
+  icon: mdi:state-machine

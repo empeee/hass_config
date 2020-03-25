@@ -1,0 +1,46 @@
+smoke_detectors:
+  entities:
+    - zwave.smoke_detector_basement
+    - zwave.smoke_detector_dining_room
+    - zwave.smoke_detector_upstairs_hall
+
+thermostats:
+  entities:
+    - zwave.thermostat_living_room
+    - zwave.thermostat_family_room
+    - zwave.thermostat_master_bedroom
+    - zwave.thermostat_jake_bedroom
+    - zwave.thermostat_upstairs_hall
+
+multisensors:
+  entities:
+    - zwave.multisensor_living_room
+    - zwave.multisensor_family_room
+    - zwave.multisensor_kitchen
+    - zwave.multisensor_basement
+
+watersensors:
+  entities:
+    - zwave.watersensor_hot_water
+    - zwave.watersensor_water_tank
+    - zwave.watersensor_sump_pump
+
+zwave_batteries:
+  entities:
+    - zwave.smoke_detector_basement
+    - zwave.smoke_detector_dining_room
+    - zwave.smoke_detector_upstairs_hall
+    - zwave.watersensor_hot_water
+    - zwave.watersensor_water_tank
+    - zwave.watersensor_sump_pump
+    - zwave.multisensor_living_room
+    - zwave.multisensor_family_room
+    - zwave.multisensor_kitchen
+    - zwave.multisensor_basement
+    - zwave.thermostat_living_room
+    - zwave.thermostat_family_room
+    - zwave.thermostat_master_bedroom
+    - zwave.thermostat_jake_bedroom
+    - zwave.thermostat_upstairs_hall
+
+
