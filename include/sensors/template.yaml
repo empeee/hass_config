@@ -198,6 +198,67 @@
           Still
         {% endif %}
 #
+# Water Sensors#
+##    {% for state in expand('group.watersensors') %}
+##    {%- set name = state.entity_id.split('.')[1] %}
+##    {%- set friendly_name = name.replace("_", " ").title() %}
+##    {%- set state_name = 'sensor.' + name +'_flood' %}
+##    {{ name + ':' }}
+##      friendly_name: {{ friendly_name }}
+##      value_template: >-
+##        {{ "{%" }} set alarm_type = states('{{ state_name }}')|int('unknown') %}
+##        {{ "{%" }} if alarm_type == 254 %}
+##          Intial Power
+##        {{ "{%" }} elif alarm_type == 2 %}
+##          Wet
+##        {{ "{%" }} elif alarm_type == 0 %}
+##          Dry
+##        {{ "{%" }} else %}
+##          Unknown
+##        {{ "{%" }} endif %}
+##    {% endfor %}
+    watersensor_hot_water:
+      friendly_name: Watersensor Hot Water
+      value_template: >-
+        {% set alarm_type = states('sensor.watersensor_hot_water_flood')|int('unknown') %}
+        {% if alarm_type == 254 %}
+          Intial Power
+        {% elif alarm_type == 2 %}
+          Wet
+        {% elif alarm_type == 0 %}
+          Dry
+        {% else %}
+          Unknown
+        {% endif %}
+    
+    watersensor_sump_pump:
+      friendly_name: Watersensor Sump Pump
+      value_template: >-
+        {% set alarm_type = states('sensor.watersensor_sump_pump_flood')|int('unknown') %}
+        {% if alarm_type == 254 %}
+          Intial Power
+        {% elif alarm_type == 2 %}
+          Wet
+        {% elif alarm_type == 0 %}
+          Dry
+        {% else %}
+          Unknown
+        {% endif %}
+    
+    watersensor_water_tank:
+      friendly_name: Watersensor Water Tank
+      value_template: >-
+        {% set alarm_type = states('sensor.watersensor_water_tank_flood')|int('unknown') %}
+        {% if alarm_type == 254 %}
+          Intial Power
+        {% elif alarm_type == 2 %}
+          Wet
+        {% elif alarm_type == 0 %}
+          Dry
+        {% else %}
+          Unknown
+        {% endif %}
+#
 # ZWave Batteries - Dynamic icons seems to be supported now?
 #
 ##    {% for state in expand('group.zwave_batteries') %}

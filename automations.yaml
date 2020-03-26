@@ -406,13 +406,28 @@
     to: Testing
   condition: []
   action:
-  - data:
-      message: '{{ now().strftime("%h %d, %Y at %H:%M:%S") }}
-
-        Basement: {{states.sensor.smoke_detector_basement.state}}
-
-        Dining Room: {{states.sensor.smoke_detector_dining_room.state}}
-
-        Upstairs Hall: {{states.sensor.smoke_detector_upstairs_hall.state}}'
+  - data_template:
+      message: ALERT! {{ now().strftime("%h %d, %Y at %H:%M:%S") }} {{ trigger.to_state.state
+        }} detected by {{trigger.to_state.attributes.friendly_name}}
       title: Smoke Detector Triggered
+    service: notify.notify
+- id: '1585244853345'
+  alias: Notify Water Sensor
+  description: ''
+  trigger:
+  - entity_id: sensor.watersensor_hot_water
+    platform: state
+    to: Wet
+  - entity_id: sensor.watersensor_water_tank
+    platform: state
+    to: Wet
+  - entity_id: sensor.watersensor_sump_pump
+    platform: state
+    to: Wet
+  condition: []
+  action:
+  - data_template:
+      message: ALERT! {{ now().strftime("%h %d, %Y at %H:%M:%S") }} {{ trigger.to_state.state
+        }} detected by {{trigger.to_state.attributes.friendly_name}}
+      title: Water Sensor Triggered
     service: notify.notify

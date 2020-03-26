@@ -30,3 +30,9 @@ sensor.thermostat_master_bedroom_state:
   icon: mdi:state-machine
 sensor.thermostat_upstairs_hall_state:
   icon: mdi:state-machine
+sensor.watersensor_hot_water:
+  icon: mdi:water
+sensor.watersensor_sump_pump:
+  icon: mdi:water
+sensor.watersensor_water_tank:
+  icon: mdi:water
