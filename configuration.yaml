@@ -38,6 +38,5 @@ speedtestdotnet: !include include/speedtest.yaml
 sun:
 system_health:
 updater:
-wink:
 weather: !include include/weather.yaml
 zwave: !include include/zwave.yaml
