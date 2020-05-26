@@ -6,7 +6,7 @@
     to: 'on'
   action:
   - data:
-      entity_id: climate.upstairs_hall_cooling
+      entity_id: group.cooling_thermostats
       hvac_mode: cool
     service: climate.set_hvac_mode
 - id: climate_cool_switch_off
